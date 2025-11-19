@@ -59,7 +59,7 @@ export default function FAQ() {
 
       {/* Strategy Section */}
       <section 
-        className="bg-white text-black border-t border-gray-300"
+        className="bg-white text-black"
         style={{ padding: "var(--space-7) var(--space-3)" }}
         data-testid="section-strategy"
       >
@@ -75,7 +75,7 @@ export default function FAQ() {
               <div className="space-y-4">
                 
                 {/* FAQ 1 */}
-                <div data-testid="faq-strategy-1" className="border-b border-gray-200">
+                <div data-testid="faq-strategy-1">
                   <h3 
                     className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
                     onClick={() => toggleFaq('strategy-1')}
@@ -90,7 +90,7 @@ export default function FAQ() {
                 </div>
 
                 {/* FAQ 2 */}
-                <div data-testid="faq-strategy-2" className="border-b border-gray-200">
+                <div data-testid="faq-strategy-2">
                   <h3 
                     className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
                     onClick={() => toggleFaq('strategy-2')}
@@ -105,7 +105,7 @@ export default function FAQ() {
                 </div>
 
                 {/* FAQ 3 */}
-                <div data-testid="faq-strategy-3" className="border-b border-gray-200">
+                <div data-testid="faq-strategy-3">
                   <h3 
                     className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
                     onClick={() => toggleFaq('strategy-3')}
@@ -120,7 +120,7 @@ export default function FAQ() {
                 </div>
 
                 {/* FAQ 4 */}
-                <div data-testid="faq-strategy-4" className="border-b border-gray-200">
+                <div data-testid="faq-strategy-4">
                   <h3 
                     className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
                     onClick={() => toggleFaq('strategy-4')}
@@ -135,7 +135,7 @@ export default function FAQ() {
                 </div>
 
                 {/* FAQ 5 */}
-                <div data-testid="faq-strategy-5" className="border-b border-gray-200">
+                <div data-testid="faq-strategy-5">
                   <h3 
                     className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
                     onClick={() => toggleFaq('strategy-5')}
@@ -172,7 +172,7 @@ export default function FAQ() {
       {/* -------------------------------------------------- */}
 
 <section 
-  className="bg-white text-black border-t border-gray-300"
+  className="bg-white text"
   style={{ padding: "var(--space-7) var(--space-3)" }}
   data-testid="section-solutions"
 >
@@ -191,7 +191,7 @@ export default function FAQ() {
         <div className="space-y-4">
 
           {/* Q1 */}
-          <div data-testid="faq-solutions-1" className="border-b border-gray-200">
+          <div data-testid="faq-solutions-1">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('solutions-1')}
@@ -206,7 +206,7 @@ export default function FAQ() {
           </div>
 
           {/* Q2 */}
-          <div data-testid="faq-solutions-2" className="border-b border-gray-200">
+          <div data-testid="faq-solutions-2">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('solutions-2')}
@@ -221,7 +221,7 @@ export default function FAQ() {
           </div>
 
           {/* Q3 */}
-          <div data-testid="faq-solutions-3" className="border-b border-gray-200">
+          <div data-testid="faq-solutions-3">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('solutions-3')}
@@ -236,7 +236,7 @@ export default function FAQ() {
           </div>
 
           {/* Q4 */}
-          <div data-testid="faq-solutions-4" className="border-b border-gray-200">
+          <div data-testid="faq-solutions-4">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('solutions-4')}
@@ -251,7 +251,7 @@ export default function FAQ() {
           </div>
 
           {/* Q5 */}
-          <div data-testid="faq-solutions-5" className="border-b border-gray-200">
+          <div data-testid="faq-solutions-5">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('solutions-5')}
@@ -266,7 +266,7 @@ export default function FAQ() {
           </div>
 
           {/* Q6 */}
-          <div data-testid="faq-solutions-6" className="border-b border-gray-200">
+          <div data-testid="faq-solutions-6">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('solutions-6')}
@@ -316,7 +316,7 @@ export default function FAQ() {
         <div className="space-y-4">
 
           {/* Q1 */}
-          <div data-testid="faq-process-1" className="border-b border-gray-200">
+          <div data-testid="faq-process-1">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('process-1')}
@@ -331,7 +331,7 @@ export default function FAQ() {
           </div>
 
           {/* Q2 */}
-          <div data-testid="faq-process-2" className="border-b border-gray-200">
+          <div data-testid="faq-process-2">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('process-2')}
@@ -346,7 +346,7 @@ export default function FAQ() {
           </div>
 
           {/* Q3 */}
-          <div data-testid="faq-process-3" className="border-b border-gray-200">
+          <div data-testid="faq-process-3">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('process-3')}
@@ -361,7 +361,7 @@ export default function FAQ() {
           </div>
 
           {/* Q4 */}
-          <div data-testid="faq-process-4" className="border-b border-gray-200">
+          <div data-testid="faq-process-4">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('process-4')}
@@ -376,7 +376,7 @@ export default function FAQ() {
           </div>
 
           {/* Q5 */}
-          <div data-testid="faq-process-5" className="border-b border-gray-200">
+          <div data-testid="faq-process-5">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('process-5')}
@@ -391,7 +391,7 @@ export default function FAQ() {
           </div>
 
           {/* Q6 */}
-          <div data-testid="faq-process-6" className="border-b border-gray-200">
+          <div data-testid="faq-process-6">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('process-6')}
@@ -441,7 +441,7 @@ export default function FAQ() {
         <div className="space-y-4">
 
           {/* Q1 */}
-          <div data-testid="faq-results-1" className="border-b border-gray-200">
+          <div data-testid="faq-results-1">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('results-1')}
@@ -456,7 +456,7 @@ export default function FAQ() {
           </div>
 
           {/* Q2 */}
-          <div data-testid="faq-results-2" className="border-b border-gray-200">
+          <div data-testid="faq-results-2">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('results-2')}
@@ -471,7 +471,7 @@ export default function FAQ() {
           </div>
 
           {/* Q3 */}
-          <div data-testid="faq-results-3" className="border-b border-gray-200">
+          <div data-testid="faq-results-3">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('results-3')}
@@ -486,7 +486,7 @@ export default function FAQ() {
           </div>
 
           {/* Q4 */}
-          <div data-testid="faq-results-4" className="border-b border-gray-200">
+          <div data-testid="faq-results-4">
             <h3 
               className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
               onClick={() => toggleFaq('results-4')}
