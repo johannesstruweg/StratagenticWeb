@@ -10,7 +10,7 @@ const automations = [
     id: "prompt-improver",
     category: "AI Interaction",
     title: "Smarter prompts for smarter replies",
-    description: "Prompts tailored to customer output requirements",
+    description: "Prompts tailored to customer + consistent output",
     demoUrl: "https://www.promptodactyl.com/",
     image: promptimproverImage,
     hidden: false
@@ -19,7 +19,7 @@ const automations = [
     id: "prospect-research",
     category: "Sales Intelligence",
     title: "AI Prospect Research",
-    description: "Automated company research and lead qualification using AI",
+    description: "Automated AI company research + lead qualification",
     demoUrl: "/demos/prospect-research",
     image: ComingSoonImage,
     hidden: false
@@ -28,7 +28,7 @@ const automations = [
     id: "data-extraction",
     category: "Data Processing",
     title: "Document Data Extraction",
-    description: "Extract structured data from PDFs, invoices, and forms automatically",
+    description: "Auto-extract data from PDFs + invoices + forms",
     demoUrl: "/demos/data-extraction",
     image: ComingSoonImage,
     hidden: false
@@ -37,7 +37,7 @@ const automations = [
     id: "meeting-scheduler",
     category: "Productivity",
     title: "AI Meeting Scheduler",
-    description: "Coordinate meetings across time zones with natural language",
+    description: "Coordinate meetings across time zones + natural language",
     demoUrl: "/demos/meeting-scheduler",
     image: "https://via.placeholder.com/400x400?text=Meeting+Scheduler",
     hidden: true
