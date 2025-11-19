@@ -536,7 +536,7 @@ export default function FAQ() {
       >
         <div className="max-w-[1400px] mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-tight">
-            Ready to transform how you operate?
+            Six months from now, you'll be glad you reached out today.
           </h2>
           <Link href="/#contact-section">
             <button 
