@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Menu } from "lucide-react";
 import logoImage from "@assets/Stratagentic_White_1762185093889.png";
 import { Header } from "@/components/header";
-const faqImage = "/MeAndAI_Hammock1.png";
+import faqImage from "@assets/images/MeAndAI_Hammock1.png";
 
 export default function FAQ() {
   const [time, setTime] = useState(new Date());
@@ -142,12 +142,13 @@ return (
             {/* Right Column - Image */}
             <div className="hidden md:block">
               <div className="sticky top-8">
-                <img 
-                  src={faqImage} 
-                  alt="Person reading with technology elements" 
-                  className="w-full h-auto object-cover"
-                  data-testid="img-faq-strategy"
-                />
+               <img
+  src={faqImage}
+  alt="Person reading with technology elements"
+  className="w-full h-auto object-cover"
+  data-testid="img-faq-strategy"
+/>
+
               </div>
             </div>
           </div>
