@@ -230,7 +230,7 @@ export default function Resources() {
 
       {/* Footer */}
       <footer
-        className="bg-white text-black border-t border-black"
+        className="bg-white text-black"
         style={{ padding: "var(--space-5) var(--space-3)" }}
       >
         <div className="max-w-[1400px] mx-auto text-sm">
