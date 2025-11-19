@@ -9,7 +9,7 @@ const automations = [
   {
     id: "prompt-improver",
     category: "AI Interaction",
-    title: "Smarter prompts for smarter replies",
+    title: "Smarter prompts = smarter replies",
     description: "Prompts tailored to customer + consistent output",
     demoUrl: "https://www.promptodactyl.com/",
     image: promptimproverImage,
