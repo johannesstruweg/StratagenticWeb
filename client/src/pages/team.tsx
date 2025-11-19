@@ -90,7 +90,7 @@ export default function Team() {
 
       {/* Ethos Section */}
       <section
-        className="bg-white text-black border-b border-gray-300"
+        className="bg-white text-black"
         data-testid="section-ethos"
       >
         <div className="max-w-[1400px] mx-auto">
