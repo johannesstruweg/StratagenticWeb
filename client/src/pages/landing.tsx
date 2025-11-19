@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { ContactForm } from "@/components/contact-form";
 import { Globe } from "@/components/globe";
-import logisticsImage from "@assets/20251106_2128_Relaxed Productivity Growth_remix_01k9ddkydze5fbb85envg8ewet_1762463943885.png";
-import promptImage from "@assets/20251106_2128_Relaxed Productivity Growth_remix_01k9ddkydze5fbb85envg8ewet_1762463943885.png";
-import prospectResearchImage from "@assets/20251106_2144_Yoga with Documents_remix_01k9degg35fj9vbrjbgdcgnxm6_1762463943885.png";
-import salesCollateralImage from "@assets/20251106_2132_Reading in the Park_remix_01k9ddv12rfqvrpzqte4g8r9yy_1762463943885.png";
-import linkedInGrowthImage from "@assets/20251106_2052_Chatting with AI_simple_compose_01k9dbhq30f8m9968761vrqywq_1762463943885.png";
-import outreachEngineImage from "@assets/20251106_2058_Automated Workflow Bliss_remix_01k9dbsp5qejw8148yk03b5qve_1762463943885.png";
+import logisticsImage from "@assets/images/MeAndAI_Chaise.png";
+import promptImage from "@assets/images/MeAndAI_Gardening1.png";
+import prospectResearchImage from "@assets/images/MeAndAI_YogaLeft.png";
+import salesCollateralImage from "@assets/images/MeAndAI_Park.png";
+import linkedInGrowthImage from "@assets/images/MeAndAI_Chatterbox.png";
+import outreachEngineImage from "@assets/images/MeAndAI_Coffeebreak.png";
 import { Header } from "@/components/header";
 import { PROCESSED_MANIFESTO, WORD_INDICES } from "@/components/manifesto-utils";
 
