@@ -194,11 +194,15 @@ export default function Team() {
         </div>
       </section>
 
-      <footer className="bg-white text-black border-t border-gray-300" style={{ padding: "var(--space-5) var(--space-3)" }}>
-        <div className="max-w-[1400px] mx-auto">
-          <div className="text-xs text-gray-600">
-            © 2025 Stratagentic. All rights reserved.
-          </div>
+   {/* Footer */}
+      <footer
+        className="bg-white text-black"
+        style={{ padding: "var(--space-5) var(--space-3)" }}
+      >
+        <div className="max-w-[1400px] mx-auto text-sm">
+          <p>
+            © 2025 Stratagentic – All rights reserved. AI-assisted, human-approved
+          </p>
         </div>
       </footer>
     </div>
