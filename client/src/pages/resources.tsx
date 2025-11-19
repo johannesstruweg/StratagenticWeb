@@ -4,6 +4,14 @@ import { X, ExternalLink } from "lucide-react";
 
 // Sample automation card data - replace with your actual automations
 const automations = [
+    {
+    id: "prompt-improver",
+    category: "AI Interaction",
+    title: "Smarter prompts for smarter replies",
+    description: "Prompts tailored to customer output requirements",
+    demoUrl: "www.promptodactyl.com",
+    image: "https://via.placeholder.com/400x400?text=Email+Automation"
+  },
   {
     id: "prospect-research",
     category: "Sales Intelligence",
@@ -11,14 +19,6 @@ const automations = [
     description: "Automated company research and lead qualification using AI",
     demoUrl: "/demos/prospect-research", // Replace with actual demo URLs
     image: "https://via.placeholder.com/400x400?text=Prospect+Research"
-  },
-  {
-    id: "email-automation",
-    category: "Outreach",
-    title: "Smart Email Sequences",
-    description: "Personalized email campaigns that adapt to recipient behavior",
-    demoUrl: "/demos/email-automation",
-    image: "https://via.placeholder.com/400x400?text=Email+Automation"
   },
   {
     id: "data-extraction",
