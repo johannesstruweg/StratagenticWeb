@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components/header";
 import { X, ExternalLink } from "lucide-react";
-import promptimproverImage from "@assets/Demo_Promptodactyl.png";
+import promptimproverImage from "@assets/images/Demo_Promptodactyl.png";
 
 // Sample automation card data - replace with your actual automations
 const automations = [
