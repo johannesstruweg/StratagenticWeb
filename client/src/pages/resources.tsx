@@ -5,21 +5,23 @@ import promptimproverImage from "@assets/images/Demo_Promptodactyl.jpg";
 
 // Sample automation card data - replace with your actual automations
 const automations = [
-    {
+  {
     id: "prompt-improver",
     category: "AI Interaction",
     title: "Smarter prompts for smarter replies",
     description: "Prompts tailored to customer output requirements",
     demoUrl: "https://www.promptodactyl.com/",
-    image: promptimproverImage
+    image: promptimproverImage,
+    hidden: false
   },
   {
     id: "prospect-research",
     category: "Sales Intelligence",
     title: "AI Prospect Research",
     description: "Automated company research and lead qualification using AI",
-    demoUrl: "/demos/prospect-research", // Replace with actual demo URLs
-    image: "https://via.placeholder.com/400x400?text=Prospect+Research"
+    demoUrl: "/demos/prospect-research",
+    image: "https://via.placeholder.com/400x400?text=Prospect+Research",
+    hidden: true
   },
   {
     id: "data-extraction",
@@ -27,7 +29,8 @@ const automations = [
     title: "Document Data Extraction",
     description: "Extract structured data from PDFs, invoices, and forms automatically",
     demoUrl: "/demos/data-extraction",
-    image: "https://via.placeholder.com/400x400?text=Data+Extraction"
+    image: "https://via.placeholder.com/400x400?text=Data+Extraction",
+    hidden: true
   },
   {
     id: "meeting-scheduler",
@@ -35,7 +38,8 @@ const automations = [
     title: "AI Meeting Scheduler",
     description: "Coordinate meetings across time zones with natural language",
     demoUrl: "/demos/meeting-scheduler",
-    image: "https://via.placeholder.com/400x400?text=Meeting+Scheduler"
+    image: "https://via.placeholder.com/400x400?text=Meeting+Scheduler",
+    hidden: true
   },
   {
     id: "content-generator",
@@ -43,7 +47,8 @@ const automations = [
     title: "Content Generator",
     description: "Generate blog posts, social media, and marketing copy on-brand",
     demoUrl: "/demos/content-generator",
-    image: "https://via.placeholder.com/400x400?text=Content+Generator"
+    image: "https://via.placeholder.com/400x400?text=Content+Generator",
+    hidden: true
   },
   {
     id: "invoice-processing",
@@ -51,7 +56,8 @@ const automations = [
     title: "Invoice Processing",
     description: "Automated invoice data extraction and approval workflows",
     demoUrl: "/demos/invoice-processing",
-    image: "https://via.placeholder.com/400x400?text=Invoice+Processing"
+    image: "https://via.placeholder.com/400x400?text=Invoice+Processing",
+    hidden: true
   },
   {
     id: "chatbot",
@@ -59,7 +65,8 @@ const automations = [
     title: "AI Support Chatbot",
     description: "Handle customer inquiries 24/7 with context-aware responses",
     demoUrl: "/demos/chatbot",
-    image: "https://via.placeholder.com/400x400?text=Support+Chatbot"
+    image: "https://via.placeholder.com/400x400?text=Support+Chatbot",
+    hidden: true
   },
   {
     id: "pipeline-tracker",
@@ -67,7 +74,8 @@ const automations = [
     title: "Pipeline Tracker",
     description: "Real-time sales pipeline updates and automated follow-ups",
     demoUrl: "/demos/pipeline-tracker",
-    image: "https://via.placeholder.com/400x400?text=Pipeline+Tracker"
+    image: "https://via.placeholder.com/400x400?text=Pipeline+Tracker",
+    hidden: true
   },
   {
     id: "report-builder",
@@ -75,9 +83,11 @@ const automations = [
     title: "Automated Reports",
     description: "Generate business reports from multiple data sources automatically",
     demoUrl: "/demos/report-builder",
-    image: "https://via.placeholder.com/400x400?text=Report+Builder"
+    image: "https://via.placeholder.com/400x400?text=Report+Builder",
+    hidden: true
   }
 ];
+
 
 export default function Resources() {
   const [selectedDemo, setSelectedDemo] = useState<typeof automations[0] | null>(null);
@@ -128,7 +138,9 @@ export default function Resources() {
           
           {/* 3x3 Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {automations.map((automation) => (
+{automations
+  .filter(a => !a.hidden)
+  .map((automation) => (
               <div
                 key={automation.id}
                 onClick={() => openDemo(automation)}
