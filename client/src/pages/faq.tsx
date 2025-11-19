@@ -36,7 +36,7 @@ export default function FAQ() {
       <Header />
 
       {/* Hero */}
-      <section className="bg-white text-black border-t border-black" style={{ padding: "var(--space-8) var(--space-3)" }}>
+      <section className="bg-white text-black" style={{ padding: "var(--space-8) var(--space-3)" }}>
         <div className="max-w-[1400px] mx-auto">
           <h1 
             className="font-bold mb-6"
