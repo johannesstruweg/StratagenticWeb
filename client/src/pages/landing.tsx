@@ -914,7 +914,7 @@ return (
                       data-testid="img-case-study-2"
                     />
                     <div className="absolute top-8 left-8 right-8 text-black z-10">
-                      <p className="text-xs uppercase tracking-wider opacity-80">Logistics</p>
+                      <p className="text-xs uppercase tracking-wider opacity-80">Operations</p>
                     </div>
                     <div className="absolute bottom-8 left-8 right-8 text-black z-10">
                       <p className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
