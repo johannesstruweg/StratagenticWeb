@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "@/components/header";
 import { X, ExternalLink } from "lucide-react";
 import promptimproverImage from "@assets/images/Demo_Promptodactyl.jpg";
+import ComingSoonImage from "@assets/images/ComingSoon.webp";
 
 // Sample automation card data - replace with your actual automations
 const automations = [
@@ -20,8 +21,8 @@ const automations = [
     title: "AI Prospect Research",
     description: "Automated company research and lead qualification using AI",
     demoUrl: "/demos/prospect-research",
-    image: "https://via.placeholder.com/400x400?text=Prospect+Research",
-    hidden: true
+    image: ComingSoonImage,
+    hidden: false
   },
   {
     id: "data-extraction",
@@ -29,8 +30,8 @@ const automations = [
     title: "Document Data Extraction",
     description: "Extract structured data from PDFs, invoices, and forms automatically",
     demoUrl: "/demos/data-extraction",
-    image: "https://via.placeholder.com/400x400?text=Data+Extraction",
-    hidden: true
+    image: ComingSoonImage,
+    hidden: false
   },
   {
     id: "meeting-scheduler",
