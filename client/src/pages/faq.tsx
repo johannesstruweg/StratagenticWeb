@@ -530,7 +530,7 @@ export default function FAQ() {
 
       {/* CTA – unchanged */}
       <section 
-        className="bg-white text-black border-t border-black"
+        className="bg-white text-black"
         style={{ padding: "var(--space-8) var(--space-3)" }}
         data-testid="section-cta"
       >
