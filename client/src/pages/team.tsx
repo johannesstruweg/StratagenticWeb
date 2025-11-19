@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu } from "lucide-react";
 import logoImage from "@assets/Stratagentic_White_1762185093889.png";
 import { Header } from "@/components/header";
+
 import franciscoDefault from "@assets/1523195690482_1762463807189.jpg";
 import johannesDefault from "@assets/JohannesStruweg_1762463512984.jpg";
 import johannesMotoX from "@assets/JanesMotoX_1762463229813.png";
@@ -13,8 +14,7 @@ import johannesJoker from "@assets/JanesJoker_1762463229813.png";
 
 export default function Team() {
   const [, setLocation] = useLocation();
-  
-  // Track which photo variant is shown for each team member (0-4 for 5 photos)
+
   const [franciscoPhotoIndex, setFranciscoPhotoIndex] = useState(0);
   const [johannesPhotoIndex, setJohannesPhotoIndex] = useState(0);
 
@@ -27,7 +27,7 @@ export default function Team() {
     window.location.assign("/#resources");
   };
 
-  // Windows XP-style error sound
+  // XP-style error sound (kept as is)
   const playErrorSound = () => {
     try {
       const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
@@ -37,11 +37,9 @@ export default function Team() {
       oscillator.connect(gainNode);
       gainNode.connect(audioContext.destination);
       
-      // Windows XP error sound is approximately 800Hz
       oscillator.frequency.value = 800;
       oscillator.type = 'sine';
       
-      // Volume envelope
       gainNode.gain.setValueAtTime(0, audioContext.currentTime);
       gainNode.gain.linearRampToValueAtTime(0.3, audioContext.currentTime + 0.01);
       gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
@@ -70,14 +68,24 @@ export default function Team() {
     johannesJoker
   ];
 
-  const cycleFranciscoPhoto = () => {
-    setFranciscoPhotoIndex((prev) => (prev + 1) % 5);
+  // NEW: mouse-scrub logic for image switching
+  const handleScrub = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    photos: string[],
+    setIndex: (i: number) => void
+  ) => {
+    const rect = (e.target as HTMLElement).getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const ratio = x / rect.width;
+    const newIndex = Math.floor(ratio * photos.length);
+    setIndex(Math.min(newIndex, photos.length - 1));
   };
 
-  const cycleJohannesPhoto = () => {
-    playErrorSound();
-    setJohannesPhotoIndex((prev) => (prev + 1) % 6);
+  const resetPhoto = (setIndex: (i: number) => void) => {
+    setIndex(0);
   };
+}
+
 
  return (
   <div className="min-h-screen bg-white text-black">
