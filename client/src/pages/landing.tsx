@@ -881,29 +881,6 @@ return (
         <div className="relative">
           <div className="overflow-x-auto overflow-y-hidden scrollbar-hide" style={{ WebkitOverflowScrolling: 'touch' }}>
             <div className="flex">
-              <Link href="/case-studies/logistics" className="flex-shrink-0 w-[320px] md:w-[500px] mx-4">
-                <div className="relative border border-black overflow-hidden cursor-pointer" data-testid="card-case-study-2">
-                  <div className="relative aspect-square">
-                    <img 
-                      src={logisticsImage} 
-                      alt="Relaxed productivity and growth illustration" 
-                      className="absolute inset-0 w-full h-full pt-8 object-contain object-top transition-none"
-                      data-testid="img-case-study-2"
-                    />
-                    <div className="absolute top-8 left-8 right-8 text-black z-10">
-                      <p className="text-xs uppercase tracking-wider opacity-80">Logistics</p>
-                    </div>
-                    <div className="absolute bottom-8 left-8 right-8 text-black z-10">
-                      <p className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
-                        40% cost reduction
-                      </p>
-                      <p className="text-sm opacity-90 leading-relaxed">
-                        Smart routing algorithms and inventory optimization cut operational costs while improving delivery times
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
                <Link href="/case-studies/prompt-engine" className="flex-shrink-0 w-[320px] md:w-[500px] mx-4">
                 <div className="relative border border-black overflow-hidden cursor-pointer" data-testid="card-case-study-2">
                   <div className="relative aspect-square">
@@ -991,6 +968,29 @@ return (
                       </p>
                       <p className="text-sm opacity-90 leading-relaxed">
                         AI-driven system maintains strong, authentic LinkedIn presence in minutes per week
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/case-studies/logistics" className="flex-shrink-0 w-[320px] md:w-[500px] mx-4">
+                <div className="relative border border-black overflow-hidden cursor-pointer" data-testid="card-case-study-2">
+                  <div className="relative aspect-square">
+                    <img 
+                      src={logisticsImage} 
+                      alt="Relaxed productivity and growth illustration" 
+                      className="absolute inset-0 w-full h-full pt-8 object-contain object-top transition-none"
+                      data-testid="img-case-study-2"
+                    />
+                    <div className="absolute top-8 left-8 right-8 text-black z-10">
+                      <p className="text-xs uppercase tracking-wider opacity-80">Logistics</p>
+                    </div>
+                    <div className="absolute bottom-8 left-8 right-8 text-black z-10">
+                      <p className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
+                        40% cost reduction
+                      </p>
+                      <p className="text-sm opacity-90 leading-relaxed">
+                        Smart routing algorithms and inventory optimization cut operational costs while improving delivery times
                       </p>
                     </div>
                   </div>
