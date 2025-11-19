@@ -201,14 +201,14 @@ export default function Resources() {
             </div>
 
             {/* Modal Content - iframe for demo */}
-            <div className="flex-1 overflow-hidden">
-              <iframe
-                src={selectedDemo.demoUrl}
-                className="w-full h-full border-0"
-                title={selectedDemo.title}
-                sandbox="allow-scripts allow-same-origin allow-forms"
-              />
-            </div>
+           <div className="aspect-[16/9] w-full">
+  <iframe
+    src={selectedDemo.demoUrl}
+    className="w-full h-full rounded-b-lg border-0"
+    title={selectedDemo.title}
+    sandbox="allow-scripts allow-same-origin allow-forms"
+  />
+</div>
 
             {/* Modal Footer */}
             <div className="p-6 border-t border-gray-200 bg-gray-50">
