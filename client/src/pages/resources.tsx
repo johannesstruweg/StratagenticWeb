@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components/header";
 import { X, ExternalLink } from "lucide-react";
+import promptimproverImage from "@assets/Demo_Promptodactyl.png";
 
 // Sample automation card data - replace with your actual automations
 const automations = [
@@ -10,7 +11,7 @@ const automations = [
     title: "Smarter prompts for smarter replies",
     description: "Prompts tailored to customer output requirements",
     demoUrl: "https://www.promptodactyl.com/",
-    image: "https://www.promptodactyl.com/Promptodactyl_logo.png"
+    image: promptimproverImage
   },
   {
     id: "prospect-research",
