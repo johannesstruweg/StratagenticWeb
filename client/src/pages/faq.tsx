@@ -139,18 +139,16 @@ return (
               </div>
             </div>
 
-            {/* Right Column - Image */}
-            <div className="hidden md:block">
-              <div className="sticky top-8">
-               <img
+        {/* Right Column - Image */}
+<div className="hidden md:block">
+<img
   src={faqImage}
   alt="Person reading with technology elements"
-  className="w-full h-auto object-cover"
+  className="w-full h-auto object-cover scale-x-[-1]"
   data-testid="img-faq-strategy"
 />
+</div>
 
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -161,7 +159,7 @@ return (
         style={{ padding: "var(--space-7) var(--space-3)" }}
         data-testid="section-solutions"
       >
-        <div className="max-w-[900px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
           <h2 className="text-sm font-bold uppercase tracking-wider mb-8 text-[#2563EB]" data-testid="text-solutions-heading">AI Solutions</h2>
           
           <div className="space-y-4">
@@ -258,7 +256,7 @@ return (
         style={{ padding: "var(--space-7) var(--space-3)" }}
         data-testid="section-process"
       >
-        <div className="max-w-[900px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
           <h2 className="text-sm font-bold uppercase tracking-wider mb-8 text-[#2563EB]" data-testid="text-process-heading">Process and Support</h2>
           
           <div className="space-y-4">
@@ -355,7 +353,7 @@ return (
         style={{ padding: "var(--space-7) var(--space-3)" }}
         data-testid="section-results"
       >
-        <div className="max-w-[900px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
           <h2 className="text-sm font-bold uppercase tracking-wider mb-8 text-[#2563EB]" data-testid="text-results-heading">Results and Confidence</h2>
           
           <div className="space-y-4">
@@ -424,7 +422,7 @@ return (
         style={{ padding: "var(--space-7) var(--space-3)" }}
         data-testid="section-closing"
       >
-        <div className="max-w-[900px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
           <p className="text-lg leading-relaxed mb-4">
             If your question isn't covered here, we will address it during your free AI Automation Audit, where we map your systems, identify growth barriers, and uncover new efficiencies.
           </p>
