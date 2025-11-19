@@ -27,27 +27,26 @@ export default function Team() {
     window.location.assign("/#resources");
   };
 
-  // XP-style error sound (kept as is)
   const playErrorSound = () => {
     try {
       const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
-      
+
       oscillator.connect(gainNode);
       gainNode.connect(audioContext.destination);
-      
+
       oscillator.frequency.value = 800;
-      oscillator.type = 'sine';
-      
+      oscillator.type = "sine";
+
       gainNode.gain.setValueAtTime(0, audioContext.currentTime);
       gainNode.gain.linearRampToValueAtTime(0.3, audioContext.currentTime + 0.01);
       gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-      
+
       oscillator.start(audioContext.currentTime);
       oscillator.stop(audioContext.currentTime + 0.3);
     } catch (error) {
-      console.log('Audio playback not supported');
+      console.log("Audio playback not supported");
     }
   };
 
@@ -68,13 +67,13 @@ export default function Team() {
     johannesJoker
   ];
 
-  // NEW: mouse-scrub logic for image switching
+  // mouse-scrub photo switching
   const handleScrub = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
     photos: string[],
     setIndex: (i: number) => void
   ) => {
-    const rect = (e.target as HTMLElement).getBoundingClientRect();
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     const x = e.clientX - rect.left;
     const ratio = x / rect.width;
     const newIndex = Math.floor(ratio * photos.length);
@@ -84,13 +83,11 @@ export default function Team() {
   const resetPhoto = (setIndex: (i: number) => void) => {
     setIndex(0);
   };
-}
 
+  return (
+    <div className="min-h-screen bg-white text-black">
+      <Header />
 
- return (
-  <div className="min-h-screen bg-white text-black">
-    <Header />
-     
       {/* Ethos Section */}
       <section
         className="bg-white text-black border-b border-gray-300"
@@ -100,7 +97,7 @@ export default function Team() {
           <div className="py-12 text-left" style={{ paddingLeft: "var(--space-3)", paddingRight: "var(--space-3)" }}>
             <div className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight space-y-8" data-testid="text-ethos-content">
               <p>We believe great systems start with great thinking.</p>
-              <p>Every solution we build begins with clarity - about purpose, process, and people. Strategy sets the direction, automation scales it, and design keeps it human. That's how we help ambitious teams work smarter, move faster, and grow with intent.</p>
+              <p>Every solution we build begins with clarity, about purpose, process, and people. Strategy sets the direction, automation scales it, and design keeps it human. That's how we help ambitious teams work smarter, move faster, and grow with intent.</p>
             </div>
           </div>
         </div>
@@ -116,108 +113,87 @@ export default function Team() {
           <h2 className="text-sm font-bold mb-12 tracking-tight" data-testid="text-founders-heading">
             The Founders
           </h2>
-          
+
           <div className="space-y-16">
-            {/* Francisco Acasuso */}
-            <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12" data-testid="card-founder-francisco">
+
+            {/* Francisco */}
+            <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
               <div className="flex flex-col items-start">
-                <button 
+                <div
                   className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-                  onClick={cycleFranciscoPhoto}
-                  aria-label="Cycle through Francisco's photos"
-                  data-testid="button-francisco-headshot"
+                  onMouseMove={(e) => handleScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
+                  onMouseLeave={() => resetPhoto(setFranciscoPhotoIndex)}
                 >
                   <img 
                     src={franciscoPhotos[franciscoPhotoIndex]}
                     alt="Francisco Acasuso"
                     className="w-full h-full object-cover"
                   />
-                </button>
+                </div>
+
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold mb-1" data-testid="text-francisco-name">Francisco Acasuso</h3>
-                  <p className="text-sm text-gray-600" data-testid="text-francisco-title">Co-founder & CEO</p>
+                  <h3 className="text-xl font-bold mb-1">Francisco Acasuso</h3>
+                  <p className="text-sm text-gray-600">Co-founder and CEO</p>
                 </div>
               </div>
-              
+
               <div className="flex flex-col justify-start">
-                <p className="text-base leading-relaxed mb-6" data-testid="text-francisco-bio">
-                  Francisco has spent over 15 years helping companies grow by pairing strong strategy with real operational results. He specializes in using AI and agentic automation to build scalable revenue systems that give businesses a competitive edge.
-                  <br /><br />
-                  He's led innovation initiatives across industries and knows how to turn bold ideas into measurable outcomes.
+                <p className="text-base leading-relaxed mb-6">
+                  Francisco has spent over 15 years helping companies grow by pairing strong strategy with real operational results...
                 </p>
-                
+
                 <div>
-                  <h4 className="text-sm font-bold mb-3" data-testid="text-francisco-focus-heading">Areas of Focus:</h4>
-                  <ul className="space-y-2 text-sm" data-testid="list-francisco-focus">
-                    <li className="flex items-start">
-                      <span className="mr-2 text-[#2563EB]">→</span>
-                      <span>Scaling businesses through revenue-growth strategy and automation</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2 text-[#2563EB]">→</span>
-                      <span>Designing AI systems that drive sustainable performance</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2 text-[#2563EB]">→</span>
-                      <span>Leading high-impact innovation and transformation projects</span>
-                    </li>
+                  <h4 className="text-sm font-bold mb-3">Areas of Focus:</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Scaling businesses through automation</li>
+                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Designing AI systems that drive sustainable performance</li>
+                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Leading high-impact innovation projects</li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* Johannes Struweg */}
-            <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12" data-testid="card-founder-johannes">
+            {/* Johannes */}
+            <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
               <div className="flex flex-col items-start">
-                <button 
+                <div
                   className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-                  onClick={cycleJohannesPhoto}
-                  aria-label="Cycle through Johannes's photos"
-                  data-testid="button-johannes-headshot"
+                  onMouseMove={(e) => handleScrub(e, johannesPhotos, setJohannesPhotoIndex)}
+                  onMouseLeave={() => resetPhoto(setJohannesPhotoIndex)}
                 >
                   <img 
                     src={johannesPhotos[johannesPhotoIndex]}
                     alt="Johannes Struweg"
                     className="w-full h-full object-cover"
                   />
-                </button>
+                </div>
+
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold mb-1" data-testid="text-johannes-name">Johannes Struweg</h3>
-                  <p className="text-sm text-gray-600" data-testid="text-johannes-title">Co-founder & COO</p>
+                  <h3 className="text-xl font-bold mb-1">Johannes Struweg</h3>
+                  <p className="text-sm text-gray-600">Co-founder and COO</p>
                 </div>
               </div>
-              
+
               <div className="flex flex-col justify-start">
-                <p className="text-base leading-relaxed mb-6" data-testid="text-johannes-bio">
-                  Johannes is a serial entrepreneur who's built and led four successful companies. With a background in growth strategy and operations, he focuses on identifying performance gaps and implementing AI solutions that make teams more effective and growth measurable.
-                  <br /><br />
-                  He helps leadership teams navigate the evolving landscape of AI with clarity and confidence.
+                <p className="text-base leading-relaxed mb-6">
+                  Johannes is a serial entrepreneur who's built and led four successful companies...
                 </p>
-                
+
                 <div>
-                  <h4 className="text-sm font-bold mb-3" data-testid="text-johannes-focus-heading">Areas of Focus:</h4>
-                  <ul className="space-y-2 text-sm" data-testid="list-johannes-focus">
-                    <li className="flex items-start">
-                      <span className="mr-2 text-[#2563EB]">→</span>
-                      <span>Growth strategy and operational optimization</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2 text-[#2563EB]">→</span>
-                      <span>AI agents and generative AI applications for business growth</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2 text-[#2563EB]">→</span>
-                      <span>Advisory to leadership teams integrating intelligent automation</span>
-                    </li>
+                  <h4 className="text-sm font-bold mb-3">Areas of Focus:</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Growth strategy and operational optimisation</li>
+                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>AI agents and generative AI for business growth</li>
+                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Advisory to leadership teams</li>
                   </ul>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-white text-black border-t border-gray-300" style={{ padding: "var(--space-5) var(--space-3)" }}>
         <div className="max-w-[1400px] mx-auto">
           <div className="text-xs text-gray-600">
