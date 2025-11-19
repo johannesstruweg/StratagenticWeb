@@ -171,128 +171,361 @@ export default function FAQ() {
       {/* AI Solutions Section */}
       {/* -------------------------------------------------- */}
 
-      <section 
-        className="bg-white text-black border-t border-gray-300"
-        style={{ padding: "var(--space-7) var(--space-3)" }}
-        data-testid="section-solutions"
-      >
-        <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
+<section 
+  className="bg-white text-black border-t border-gray-300"
+  style={{ padding: "var(--space-7) var(--space-3)" }}
+  data-testid="section-solutions"
+>
+  <div className="max-w-[1400px] mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
 
-            {/* Left */}
-            <div className="max-w-[700px]">
-              <h2 className="text-sm font-bold uppercase tracking-wider mb-8 text-[#2563EB]" data-testid="text-solutions-heading">
-                AI Solutions
-              </h2>
+      {/* Left */}
+      <div className="max-w-[700px]">
+        <h2 
+          className="text-sm font-bold uppercase tracking-wider mb-8 text-[#2563EB]" 
+          data-testid="text-solutions-heading"
+        >
+          AI Solutions
+        </h2>
 
-              <div className="space-y-4">
+        <div className="space-y-4">
 
-                {/* FAQ items unchanged */}
-                {/* ...all your solution FAQs... */}
-
-              </div>
-            </div>
-
-            {/* Right – empty placeholder */}
-            <div className="hidden md:block"></div>
-
+          {/* Q1 */}
+          <div data-testid="faq-solutions-1" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('solutions-1')}
+            >
+              What are AI agents, and what can they do?
+            </h3>
+            {openFaq === 'solutions-1' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                AI agents are intelligent systems that perform business tasks autonomously, from prospect research and customer engagement to data reporting and content creation. They handle repetitive work, surface insights, and scale output without extra headcount.
+              </p>
+            )}
           </div>
+
+          {/* Q2 */}
+          <div data-testid="faq-solutions-2" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('solutions-2')}
+            >
+              Do you build everything from scratch, or adapt existing tools?
+            </h3>
+            {openFaq === 'solutions-2' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                We combine both approaches. Some systems are built from the ground up using APIs and workflows, while others integrate best-in-class platforms such as n8n, Zapier, Relevance AI, or custom GPTs, always tailored to your stack and goals.
+              </p>
+            )}
+          </div>
+
+          {/* Q3 */}
+          <div data-testid="faq-solutions-3" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('solutions-3')}
+            >
+              Can your AI systems integrate with our existing tools?
+            </h3>
+            {openFaq === 'solutions-3' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                Yes. Integration is core to every build. We connect CRMs, marketing platforms, databases, and internal tools so your data flows seamlessly between systems.
+              </p>
+            )}
+          </div>
+
+          {/* Q4 */}
+          <div data-testid="faq-solutions-4" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('solutions-4')}
+            >
+              How do you handle data security and privacy?
+            </h3>
+            {openFaq === 'solutions-4' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                We follow strict data governance and GDPR compliance standards. Where possible, we use secure EU-based hosting and local processing. Client data remains confidential and under your control at all times.
+              </p>
+            )}
+          </div>
+
+          {/* Q5 */}
+          <div data-testid="faq-solutions-5" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('solutions-5')}
+            >
+              Does AI replace people, or make their work easier?
+            </h3>
+            {openFaq === 'solutions-5' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                AI supports, not replaces. Our goal is to remove manual friction so your team can focus on higher-value work such as strategy, relationships, and creativity.
+              </p>
+            )}
+          </div>
+
+          {/* Q6 */}
+          <div data-testid="faq-solutions-6" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('solutions-6')}
+            >
+              What happens if an automation or AI agent fails or produces errors?
+            </h3>
+            {openFaq === 'solutions-6' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                Every system includes error handling, human oversight, and continuous monitoring. If something fails, we identify the cause, adjust logic, and deploy fixes to prevent repeat issues.
+              </p>
+            )}
+          </div>
+
         </div>
-      </section>
+      </div>
+
+      {/* Right – empty */}
+      <div className="hidden md:block"></div>
+
+    </div>
+  </div>
+</section>
+
 
 
       {/* -------------------------------------------------- */}
       {/* Process and Support Section */}
       {/* -------------------------------------------------- */}
 
-      <section 
-        className="bg-white text-black border-t border-gray-300"
-        style={{ padding: "var(--space-7) var(--space-3)" }}
-        data-testid="section-process"
-      >
-        <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
+<section 
+  className="bg-white text-black border-t border-gray-300"
+  style={{ padding: "var(--space-7) var(--space-3)" }}
+  data-testid="section-process"
+>
+  <div className="max-w-[1400px] mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
 
-            {/* Left */}
-            <div className="max-w-[700px]">
-              <h2 className="text-sm font-bold uppercase tracking-wider mb-8 text-[#2563EB]" data-testid="text-process-heading">
-                Process and Support
-              </h2>
+      {/* Left */}
+      <div className="max-w-[700px]">
+        <h2 
+          className="text-sm font-bold uppercase tracking-wider mb-8 text-[#2563EB]" 
+          data-testid="text-process-heading"
+        >
+          Process and Support
+        </h2>
 
-              <div className="space-y-4">
+        <div className="space-y-4">
 
-                {/* FAQ items unchanged */}
-                {/* ...all process FAQs... */}
-
-              </div>
-            </div>
-
-            {/* Right – empty placeholder */}
-            <div className="hidden md:block"></div>
-
+          {/* Q1 */}
+          <div data-testid="faq-process-1" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('process-1')}
+            >
+              What are the stages of your implementation process?
+            </h3>
+            {openFaq === 'process-1' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                We begin with a short discovery and audit, followed by design, system build, testing, and live rollout. Each stage includes clear milestones, reviews, and client input.
+              </p>
+            )}
           </div>
+
+          {/* Q2 */}
+          <div data-testid="faq-process-2" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('process-2')}
+            >
+              How much effort is required from our team during implementation?
+            </h3>
+            {openFaq === 'process-2' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                Minimal. We do the heavy lifting. Your role is to validate goals, provide access to systems, and review progress at key checkpoints.
+              </p>
+            )}
+          </div>
+
+          {/* Q3 */}
+          <div data-testid="faq-process-3" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('process-3')}
+            >
+              How long does implementation take?
+            </h3>
+            {openFaq === 'process-3' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                Most client systems go live within 2 to 6 weeks, depending on complexity and integrations.
+              </p>
+            )}
+          </div>
+
+          {/* Q4 */}
+          <div data-testid="faq-process-4" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('process-4')}
+            >
+              What happens after the system is live?
+            </h3>
+            {openFaq === 'process-4' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                We provide post-launch optimization, monitoring, and regular performance reviews. As your needs evolve, we adjust automations and introduce new capabilities.
+              </p>
+            )}
+          </div>
+
+          {/* Q5 */}
+          <div data-testid="faq-process-5" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('process-5')}
+            >
+              Do you offer training for internal teams?
+            </h3>
+            {openFaq === 'process-5' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                Yes. We provide tailored onboarding, process documentation, and optional AI literacy sessions to ensure your team understands how to manage and extend the system independently.
+              </p>
+            )}
+          </div>
+
+          {/* Q6 */}
+          <div data-testid="faq-process-6" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('process-6')}
+            >
+              Can you collaborate with our existing consultants or IT providers?
+            </h3>
+            {openFaq === 'process-6' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                Absolutely. We often work alongside internal teams, marketing agencies, and technology vendors to ensure smooth integration and shared success.
+              </p>
+            )}
+          </div>
+
         </div>
-      </section>
+      </div>
+
+      {/* Right – empty */}
+      <div className="hidden md:block"></div>
+
+    </div>
+  </div>
+</section>
+
 
 
       {/* -------------------------------------------------- */}
       {/* Results and Confidence Section */}
       {/* -------------------------------------------------- */}
 
-      <section 
-        className="bg-white text-black border-t border-gray-300"
-        style={{ padding: "var(--space-7) var(--space-3)" }}
-        data-testid="section-results"
-      >
-        <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
+<section 
+  className="bg-white text-black border-t border-gray-300"
+  style={{ padding: "var(--space-7) var(--space-3)" }}
+  data-testid="section-results"
+>
+  <div className="max-w-[1400px] mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] gap-12">
 
-            {/* Left */}
-            <div className="max-w-[700px]">
-              <h2 className="text-sm font-bold uppercase tracking-wider mb-8 text-[#2563EB]" data-testid="text-results-heading">
-                Results and Confidence
-              </h2>
+      {/* Left */}
+      <div className="max-w-[700px]">
+        <h2 
+          className="text-sm font-bold uppercase tracking-wider mb-8 text-[#2563EB]" 
+          data-testid="text-results-heading"
+        >
+          Results and Confidence
+        </h2>
 
-              <div className="space-y-4">
+        <div className="space-y-4">
 
-                {/* FAQ items unchanged */}
-                {/* ...all results FAQs... */}
-
-              </div>
-            </div>
-
-            {/* Right – empty placeholder */}
-            <div className="hidden md:block"></div>
-
-          </div>
-        </div>
-      </section>
-
-
-      {/* -------------------------------------------------- */}
-      {/* Closing Section (stay exactly as you want) */}
-      {/* -------------------------------------------------- */}
-
-      <section 
-        className="bg-white text-black border-t border-gray-300"
-        style={{ padding: "var(--space-7) var(--space-3)" }}
-        data-testid="section-closing"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-[1fr,600px] max-w-[1400px] mx-auto gap-12">
-          
-          <div className="max-w-[700px]">
-            <p className="text-lg leading-relaxed mb-4">
-              If your question isn't covered here, we will address it during your free AI Automation Audit...
-            </p>
-            <p className="text-lg font-bold">
-              Our goal is simple: your operations run smoother, your team achieves more, and progress feels effortless.
-            </p>
+          {/* Q1 */}
+          <div data-testid="faq-results-1" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('results-1')}
+            >
+              What kind of impact can we expect from your AI systems?
+            </h3>
+            {openFaq === 'results-1' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                Results vary by scope, but most clients experience significant gains in efficiency, output, and speed of execution. We focus on measurable outcomes that directly support growth or reduce cost.
+              </p>
+            )}
           </div>
 
-          {/* Right – empty placeholder */}
-          <div className="hidden md:block"></div>
+          {/* Q2 */}
+          <div data-testid="faq-results-2" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('results-2')}
+            >
+              Can we start small, or do you require a full-scale engagement?
+            </h3>
+            {openFaq === 'results-2' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                You can start small. Many clients begin with a pilot project or focused automation to validate value before scaling further.
+              </p>
+            )}
+          </div>
+
+          {/* Q3 */}
+          <div data-testid="faq-results-3" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('results-3')}
+            >
+              What happens if the implementation doesn't deliver results?
+            </h3>
+            {openFaq === 'results-3' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                We treat every system as a partnership. If performance falls short, we work iteratively to resolve it. Your success defines our success.
+              </p>
+            )}
+          </div>
+
+          {/* Q4 */}
+          <div data-testid="faq-results-4" className="border-b border-gray-200">
+            <h3 
+              className="text-xl font-bold py-4 cursor-pointer hover:text-[#2563EB] transition-colors"
+              onClick={() => toggleFaq('results-4')}
+            >
+              Do you offer pilot projects or proofs of concept?
+            </h3>
+            {openFaq === 'results-4' && (
+              <p className="text-base leading-relaxed pb-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                Yes. Pilot builds are an excellent way to test automation value quickly before rolling out larger systems.
+              </p>
+            )}
+          </div>
+
         </div>
-      </section>
+      </div>
+
+      {/* Right – empty */}
+      <div className="hidden md:block"></div>
+
+    </div>
+  </div>
+</section>
+
+     {/* Closing Section */}
+<section 
+  className="bg-white text-black border-t border-gray-300"
+  style={{ padding: "var(--space-7) var(--space-3)" }}
+  data-testid="section-closing"
+>
+  <div className="max-w-[1400px] mx-auto">
+    <p className="text-lg leading-relaxed mb-4">
+      If your question isn't covered here, we will address it during your free AI Automation Audit, where we map your systems, identify growth barriers, and uncover new efficiencies.
+    </p>
+
+    <p className="text-lg font-bold">
+      Our goal is simple: your operations run smoother, your team achieves more, and progress feels effortless.
+    </p>
+  </div>
+</section>
 
 
       {/* CTA – unchanged */}
