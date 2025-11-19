@@ -10,7 +10,7 @@ const automations = [
     title: "Smarter prompts for smarter replies",
     description: "Prompts tailored to customer output requirements",
     demoUrl: "www.promptodactyl.com",
-    image: "https://via.placeholder.com/400x400?text=Email+Automation"
+    image: "https://www.promptodactyl.com/Promptodactyl_logo.png"
   },
   {
     id: "prospect-research",
