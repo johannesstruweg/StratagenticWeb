@@ -5,12 +5,12 @@ import logoImage from "@assets/Stratagentic_White_1762185093889.png";
 import { Header } from "@/components/header";
 
 import franciscoDefault from "@assets/1523195690482_1762463807189.jpg";
-import johannesDefault from "@assets/JohannesStruweg_1762463512984.jpg";
-import johannesMotoX from "@assets/JanesMotoX_1762463229813.png";
-import johannesAgassi from "@assets/JanesAgassi_1762463229813.png";
-import johannesTeen from "@assets/JanesTeen_1762463229813.png";
-import johannesViking from "@assets/JanesViking_1762463229813.png";
-import johannesJoker from "@assets/JanesJoker_1762463229813.png";
+import JanesShuffle1 from "@assets/JanesShuffle1.jpg";
+import JanesShuffle4 from "@assets/JanesShuffle1.4pg";
+import JanesShuffle5 from "@assets/JanesShuffle5.jpg";
+import JanesShuffle6 from "@assets/JanesShuffle6.jpg";
+import JanesShuffle7 from "@assets/JanesShuffle7.jpg";
+import JanesShuffle8 from "@assets/JanesShuffle8.jpg";
 
 export default function Team() {
   const [, setLocation] = useLocation();
@@ -59,12 +59,18 @@ export default function Team() {
   ];
 
   const johannesPhotos = [
-    johannesDefault,
-    johannesMotoX,
-    johannesAgassi,
-    johannesTeen,
-    johannesViking,
-    johannesJoker
+    JanesShuffle1,
+    JanesShuffle4,
+    JanesShuffle5,
+    JanesShuffle6,
+    JanesShuffle7,
+    JanesShuffle8,
+    JanesShuffle1,
+    JanesShuffle4,
+    JanesShuffle5,
+    JanesShuffle6,
+    JanesShuffle7,
+    JanesShuffle8
   ];
 
   // mouse-scrub photo switching
