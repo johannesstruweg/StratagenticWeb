@@ -6,7 +6,7 @@ import { Header } from "@/components/header";
 
 import franciscoDefault from "@assets/1523195690482_1762463807189.jpg";
 import JanesShuffle1 from "@assets/images/JanesShuffle1.jpg";
-import JanesShuffle4 from "@assets/images/JanesShuffle1.4pg";
+import JanesShuffle4 from "@assets/images/JanesShuffle4.jpg";
 import JanesShuffle5 from "@assets/images/JanesShuffle5.jpg";
 import JanesShuffle6 from "@assets/images/JanesShuffle6.jpg";
 import JanesShuffle7 from "@assets/images/JanesShuffle7.jpg";
