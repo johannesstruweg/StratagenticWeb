@@ -10,7 +10,7 @@ import JanesShuffle5 from "@assets/images/JanesShuffle5.jpg";
 import JanesShuffle6 from "@assets/images/JanesShuffle6.jpg";
 import JanesShuffle7 from "@assets/images/JanesShuffle7.jpg";
 import JanesShuffle8 from "@assets/images/JanesShuffle8.jpg";
-import FranShuffle1 from "@assets/images/FranShuffle1.jpg";
+import FranShuffle1 from "@assets/images/FranShuffle1.png";
 import FranShuffle2 from "@assets/images/FranShuffle2.jpg";
 import FranShuffle3 from "@assets/images/FranShuffle3.jpg";
 import FranShuffle4 from "@assets/images/FranShuffle4.jpg";
