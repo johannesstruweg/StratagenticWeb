@@ -217,13 +217,17 @@ return (
             automation to make growth measurable and sustainable.
           </p>
           
-          <button 
-            className="inline-flex items-center justify-center bg-black text-white px-6 py-3 text-sm hover-elevate active-elevate-2 transition-all"
-            data-testid="button-hero-cta"
-          >
-            <span className="mr-2">→</span>
-            Get started
-          </button>
+       <button
+  onClick={() => {
+    document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="inline-flex items-center justify-center bg-black text-white px-6 py-3 text-sm hover-elevate active-elevate-2 transition-all"
+  data-testid="button-hero-cta"
+>
+  <span className="mr-2">→</span>
+  Get started
+</button>
+
         </div>
       </section>
 
