@@ -122,123 +122,128 @@ export default function Team() {
         </div>
       </section>
 
-      {/* The Founders Section */}
-      <section
-        className="bg-white text-black"
-        style={{ padding: "var(--space-8) var(--space-3)" }}
-        data-testid="section-founders"
-      >
-        <div className="max-w-[1400px] mx-auto">
-          <h2 className="text-sm font-bold mb-12 tracking-tight" data-testid="text-founders-heading">
-            The Founders
-          </h2>
+   {/* The Founders Section */}
+<section
+  className="bg-white text-black"
+  style={{ padding: "var(--space-8) var(--space-3)" }}
+  data-testid="section-founders"
+>
+  <div className="max-w-[1400px] mx-auto">
+    <h2 className="text-sm font-bold mb-12 tracking-tight" data-testid="text-founders-heading">
+      The Founders
+    </h2>
 
-          <div className="space-y-16">
+    <div className="space-y-16">
 
-            {/* Francisco */}
-            <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
-              <div className="flex flex-col items-start">
-                <div
-                  className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-                  onMouseMove={(e) => handleScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
-                  onMouseLeave={() => resetPhoto(setFranciscoPhotoIndex)}
-                >
-                  <img 
-                    src={franciscoPhotos[franciscoPhotoIndex]}
-                    alt="Francisco Acasuso"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+      {/* Francisco */}
+      <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
+        <div className="flex flex-col items-start">
+          <div
+            className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
+            onMouseMove={(e) => handleScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
+            onMouseLeave={() => resetPhoto(setFranciscoPhotoIndex)}
+          >
+            <img 
+              src={franciscoPhotos[franciscoPhotoIndex]}
+              alt="Francisco Acasuso"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold mb-1">Francisco Acasuso</h3>
-                  <p className="text-sm text-gray-600">Co-founder and CEO</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col justify-start">
-                <p className="text-base leading-relaxed mb-6">
-                  Francisco brings a seasoned approach to scaling companies. He focuses on how AI and automation can unlock capacity, accelerate execution, and create sustainable growth. His work combines strategic insight with a practical understanding of how systems behave as businesses scale.
-                </p>
-
-                <div>
-                  <h4 className="text-sm font-bold mb-3">Areas of Focus:</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Scaling businesses through automation</li>
-                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Designing AI systems that drive sustainable performance</li>
-                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Leading high-impact innovation projects</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="mt-8">
-  <h4 className="text-sm font-bold mb-3">Previous Experience:</h4>
-  <div className="flex flex-wrap gap-2">
-    {["PwC", "Slingshot", "The Economist", "Boost AI", "Betway"].map((item) => (
-      <span 
-        key={item} 
-        className="px-3 py-1 text-xs bg-black text-white tracking-tight"
-      >
-        {item}
-      </span>
-    ))}
-  </div>
-</div>
-
-
-            {/* Johannes */}
-            <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
-              <div className="flex flex-col items-start">
-                <div
-                  className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-                  onMouseMove={(e) => handleScrub(e, johannesPhotos, setJohannesPhotoIndex)}
-                  onMouseLeave={() => resetPhoto(setJohannesPhotoIndex)}
-                >
-                  <img 
-                    src={johannesPhotos[johannesPhotoIndex]}
-                    alt="Johannes Struweg"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold mb-1">Johannes Struweg</h3>
-                  <p className="text-sm text-gray-600">Co-founder and COO</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col justify-start">
-                <p className="text-base leading-relaxed mb-6">
-                  Johannes is a serial entrepreneur with a deep focus on operational performance. Having built and led four companies, he understands where teams get stuck and how to deploy AI to remove friction, simplify workflows, and accelerate measurable outcomes.
-                </p>
-
-                <div>
-                  <h4 className="text-sm font-bold mb-3">Areas of Focus:</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Growth strategy and operational optimisation</li>
-                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>AI agents and generative AI for business growth</li>
-                    <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Advisory to leadership teams</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
+          <div className="mt-4">
+            <h3 className="text-xl font-bold mb-1">Francisco Acasuso</h3>
+            <p className="text-sm text-gray-600">Co-founder and CEO</p>
           </div>
         </div>
-      </section>
-      <div className="mt-8">
-  <h4 className="text-sm font-bold mb-3">Previous Experience:</h4>
-  <div className="flex flex-wrap gap-2">
-    {["PwC", "Slingshot", "ICADS", "Tassels", "Emerge"].map((item) => (
-      <span 
-        key={item} 
-        className="px-3 py-1 text-xs bg-black text-white tracking-tight"
-      >
-        {item}
-      </span>
-    ))}
+
+        <div className="flex flex-col justify-start">
+          <p className="text-base leading-relaxed mb-6">
+            Francisco brings a seasoned approach to scaling companies. He focuses on how AI and automation can unlock capacity, accelerate execution, and create sustainable growth. His work combines strategic insight with a practical understanding of how systems behave as businesses scale.
+          </p>
+
+          <div>
+            <h4 className="text-sm font-bold mb-3">Areas of Focus:</h4>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Scaling businesses through automation</li>
+              <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Designing AI systems that drive sustainable performance</li>
+              <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Leading high-impact innovation projects</li>
+            </ul>
+
+            {/* Experience aligned here */}
+            <div className="mt-8">
+              <h4 className="text-sm font-bold mb-3">Previous Experience:</h4>
+              <div className="flex flex-wrap gap-2">
+                {["PwC", "Slingshot", "The Economist", "Boost AI", "Betway"].map((item) => (
+                  <span 
+                    key={item} 
+                    className="px-3 py-1 text-xs bg-black text-white tracking-tight"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Johannes */}
+      <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
+        <div className="flex flex-col items-start">
+          <div
+            className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
+            onMouseMove={(e) => handleScrub(e, johannesPhotos, setJohannesPhotoIndex)}
+            onMouseLeave={() => resetPhoto(setJohannesPhotoIndex)}
+          >
+            <img 
+              src={johannesPhotos[johannesPhotoIndex]}
+              alt="Johannes Struweg"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="mt-4">
+            <h3 className="text-xl font-bold mb-1">Johannes Struweg</h3>
+            <p className="text-sm text-gray-600">Co-founder and COO</p>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-start">
+          <p className="text-base leading-relaxed mb-6">
+            Johannes is a serial entrepreneur with a deep focus on operational performance. Having built and led four companies, he understands where teams get stuck and how to deploy AI to remove friction, simplify workflows, and accelerate measurable outcomes.
+          </p>
+
+          <div>
+            <h4 className="text-sm font-bold mb-3">Areas of Focus:</h4>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Growth strategy and operational optimisation</li>
+              <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>AI agents and generative AI for business growth</li>
+              <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Advisory to leadership teams</li>
+            </ul>
+
+            {/* Experience aligned here */}
+            <div className="mt-8">
+              <h4 className="text-sm font-bold mb-3">Previous Experience:</h4>
+              <div className="flex flex-wrap gap-2">
+                {["PwC", "Slingshot", "ICADS", "Tassels", "Emerge"].map((item) => (
+                  <span 
+                    key={item} 
+                    className="px-3 py-1 text-xs bg-black text-white tracking-tight"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
+</section>
+
 
 
    {/* Footer */}
