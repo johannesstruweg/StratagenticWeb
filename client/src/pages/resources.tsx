@@ -120,11 +120,10 @@ export default function Resources() {
               letterSpacing: "-0.02em"
             }}
           >
-            Great systems start with curiosity. Here you can explore the tools, ideas, and examples that shape how we build intelligent automation.
+            Great systems start with curiosity. Explore some tools, ideas, and examples that shape how we build intelligent automation.
           </h1>
           <p className="text-lg md:text-xl leading-relaxed max-w-4xl">
-           This page brings together some of the things we’re building together with clients, or on our own. You’ll find demos to try, practical examples of automation in action, and articles that explain how we solve real problems for real businesses. Nothing fancy. Just useful tools, clear thinking, and ideas you can apply straight away. Explore at your own pace, test what interests you, and see what’s possible for your own team.
-          </p>
+        Experience some of the things we’re building together with clients, or on our own. Explore and test demos at your own pace, or find inspiration in the articles. See what’s possible for your own team.          </p>
         </div>
       </section>
 
