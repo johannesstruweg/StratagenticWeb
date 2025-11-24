@@ -4,13 +4,18 @@ import { Menu } from "lucide-react";
 import logoImage from "@assets/Stratagentic_White_1762185093889.png";
 import { Header } from "@/components/header";
 
-import franciscoDefault from "@assets/1523195690482_1762463807189.jpg";
 import JanesShuffle1 from "@assets/images/JanesShuffle1.jpg";
 import JanesShuffle4 from "@assets/images/JanesShuffle4.jpg";
 import JanesShuffle5 from "@assets/images/JanesShuffle5.jpg";
 import JanesShuffle6 from "@assets/images/JanesShuffle6.jpg";
 import JanesShuffle7 from "@assets/images/JanesShuffle7.jpg";
 import JanesShuffle8 from "@assets/images/JanesShuffle8.jpg";
+import FranShuffle1 from "@assets/images/FranShuffle1.jpg";
+import FranShuffle2 from "@assets/images/FranShuffle2.jpg";
+import FranShuffle3 from "@assets/images/FranShuffle3.jpg";
+import FranShuffle4 from "@assets/images/FranShuffle4.jpg";
+import FranShuffle5 from "@assets/images/FranShuffle5.jpg";
+import FranShuffle6 from "@assets/images/FranShuffle6.jpg";
 
 export default function Team() {
   const [, setLocation] = useLocation();
@@ -51,11 +56,19 @@ export default function Team() {
   };
 
   const franciscoPhotos = [
-    franciscoDefault,
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
+    FranShuffle1,
+    FranShuffle2,
+    FranShuffle3,
+    FranShuffle4,
+    FranShuffle5,
+    FranShuffle6,
+    FranShuffle1,
+    FranShuffle2,
+    FranShuffle3,
+    FranShuffle4,
+    FranShuffle5,
+    FranShuffle6,
+
   ];
 
   const johannesPhotos = [
