@@ -158,7 +158,7 @@ export default function Team() {
 
               <div className="flex flex-col justify-start">
                 <p className="text-base leading-relaxed mb-6">
-                  Francisco has spent over 15 years helping companies grow by pairing strong strategy with real operational results...
+                  Francisco brings a seasoned approach to scaling companies. He focuses on how AI and automation can unlock capacity, accelerate execution, and create sustainable growth. His work combines strategic insight with a practical understanding of how systems behave as businesses scale.
                 </p>
 
                 <div>
@@ -171,6 +171,20 @@ export default function Team() {
                 </div>
               </div>
             </div>
+            <div className="mt-8">
+  <h4 className="text-sm font-bold mb-3">Previous Experience:</h4>
+  <div className="flex flex-wrap gap-2">
+    {["PwC", "Slingshot", "The Economist", "Boost AI", "Betway"].map((item) => (
+      <span 
+        key={item} 
+        className="px-3 py-1 text-xs bg-black text-white tracking-tight"
+      >
+        {item}
+      </span>
+    ))}
+  </div>
+</div>
+
 
             {/* Johannes */}
             <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
@@ -195,7 +209,7 @@ export default function Team() {
 
               <div className="flex flex-col justify-start">
                 <p className="text-base leading-relaxed mb-6">
-                  Johannes is a serial entrepreneur who's built and led four successful companies...
+                  Johannes is a serial entrepreneur with a deep focus on operational performance. Having built and led four companies, he understands where teams get stuck and how to deploy AI to remove friction, simplify workflows, and accelerate measurable outcomes.
                 </p>
 
                 <div>
@@ -212,6 +226,20 @@ export default function Team() {
           </div>
         </div>
       </section>
+      <div className="mt-8">
+  <h4 className="text-sm font-bold mb-3">Previous Experience:</h4>
+  <div className="flex flex-wrap gap-2">
+    {["PwC", "Slingshot", "ICADS", "Tassels", "Emerge"].map((item) => (
+      <span 
+        key={item} 
+        className="px-3 py-1 text-xs bg-black text-white tracking-tight"
+      >
+        {item}
+      </span>
+    ))}
+  </div>
+</div>
+
 
    {/* Footer */}
       <footer
