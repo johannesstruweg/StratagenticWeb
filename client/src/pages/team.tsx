@@ -225,7 +225,7 @@ export default function Team() {
             <div className="mt-8">
               <h4 className="text-sm font-bold mb-3">Previous Experience:</h4>
               <div className="flex flex-wrap gap-2">
-                {["PwC", "Slingshot", "ICADS", "Tassels", "Emerge"].map((item) => (
+                {["PwC", "Slingshot", "ICADS", "Emerge", "Harrods", "Lego"].map((item) => (
                   <span 
                     key={item} 
                     className="px-3 py-1 text-xs bg-black text-white tracking-tight"
