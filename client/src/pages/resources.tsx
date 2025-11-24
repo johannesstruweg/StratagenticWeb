@@ -120,12 +120,10 @@ export default function Resources() {
               letterSpacing: "-0.02em"
             }}
           >
-            We believe great systems start with great thinking.
+            Great systems start with curiosity. Here you can explore the tools, ideas, and examples that shape how we build intelligent automation.
           </h1>
           <p className="text-lg md:text-xl leading-relaxed max-w-4xl">
-            Every solution we build begins with clarity, about purpose, process, and people. 
-            Strategy sets the direction, automation scales it, and design keeps it human. 
-            That's how we help ambitious teams work smarter, move faster, and grow with intent.
+           This page brings together some of the things we’re building together with clients, or on our own. You’ll find demos to try, practical examples of automation in action, and articles that explain how we solve real problems for real businesses. Nothing fancy. Just useful tools, clear thinking, and ideas you can apply straight away. Explore at your own pace, test what interests you, and see what’s possible for your own team.
           </p>
         </div>
       </section>
