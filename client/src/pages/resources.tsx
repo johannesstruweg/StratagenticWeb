@@ -8,7 +8,7 @@ import ComingSoonImage from "@assets/images/ComingSoon.webp";
 const automations = [
   {
     id: "prompt-improver",
-    category: "AI Interaction",
+    category: "AI interaction",
     title: "Smarter prompts = smarter replies",
     description: "Prompts tailored to customer + consistent output",
     demoUrl: "https://www.promptodactyl.com/",
@@ -17,8 +17,8 @@ const automations = [
   },
   {
     id: "prospect-research",
-    category: "Sales Intelligence",
-    title: "AI Prospect Research",
+    category: "Sales intelligence",
+    title: "AI prospect research",
     description: "Automated AI company research + lead qualification",
     demoUrl: "/demos/prospect-research",
     image: ComingSoonImage,
@@ -26,7 +26,7 @@ const automations = [
   },
   {
     id: "data-extraction",
-    category: "Data Processing",
+    category: "Data processing",
     title: "Document Data Extraction",
     description: "Auto-extract data from PDFs + invoices + forms",
     demoUrl: "/demos/data-extraction",
@@ -36,7 +36,7 @@ const automations = [
   {
     id: "meeting-scheduler",
     category: "Productivity",
-    title: "AI Meeting Scheduler",
+    title: "AI meeting scheduler",
     description: "Coordinate meetings across time zones + natural language",
     demoUrl: "/demos/meeting-scheduler",
     image: "https://via.placeholder.com/400x400?text=Meeting+Scheduler",
@@ -45,7 +45,7 @@ const automations = [
   {
     id: "content-generator",
     category: "Marketing",
-    title: "Content Generator",
+    title: "Content generator",
     description: "Generate blog posts, social media, and marketing copy on-brand",
     demoUrl: "/demos/content-generator",
     image: "https://via.placeholder.com/400x400?text=Content+Generator",
@@ -54,7 +54,7 @@ const automations = [
   {
     id: "invoice-processing",
     category: "Finance",
-    title: "Invoice Processing",
+    title: "Invoice processing",
     description: "Automated invoice data extraction and approval workflows",
     demoUrl: "/demos/invoice-processing",
     image: "https://via.placeholder.com/400x400?text=Invoice+Processing",
@@ -63,7 +63,7 @@ const automations = [
   {
     id: "chatbot",
     category: "Customer Support",
-    title: "AI Support Chatbot",
+    title: "AI support chatbot",
     description: "Handle customer inquiries 24/7 with context-aware responses",
     demoUrl: "/demos/chatbot",
     image: "https://via.placeholder.com/400x400?text=Support+Chatbot",
@@ -71,7 +71,7 @@ const automations = [
   },
   {
     id: "pipeline-tracker",
-    category: "Sales Operations",
+    category: "Sales operations",
     title: "Pipeline Tracker",
     description: "Real-time sales pipeline updates and automated follow-ups",
     demoUrl: "/demos/pipeline-tracker",
@@ -81,7 +81,7 @@ const automations = [
   {
     id: "report-builder",
     category: "Analytics",
-    title: "Automated Reports",
+    title: "Automated reports",
     description: "Generate business reports from multiple data sources automatically",
     demoUrl: "/demos/report-builder",
     image: "https://via.placeholder.com/400x400?text=Report+Builder",
@@ -131,7 +131,7 @@ export default function Resources() {
       <section style={{ padding: "var(--space-7) var(--space-3)" }}>
         <div className="max-w-[1400px] mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 tracking-tight">
-            Try Our Automations
+            AI & automation demo's
           </h2>
           
           {/* 3x3 Grid */}
