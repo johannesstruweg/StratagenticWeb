@@ -306,7 +306,7 @@ return (
         style={{ padding: "var(--space-7) var(--space-3)" }}
         data-testid="section-services"
       >
-        <div className="max-w-[1400px] mx-auto">
+        <div className="w-full px-[var(--space-3)]">
           <div className="space-y-0">
             <div 
               className="border-b border-black cursor-pointer group"
@@ -766,7 +766,7 @@ return (
         className="fade-in-section bg-white text-black"
         data-testid="section-better-world"
       >
-        <div className="max-w-[1400px] mx-auto px-[var(--space-3)]">
+          <div className="w-full px-[var(--space-3)]">
           <div className="py-12 text-left">
             <div 
               className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight space-y-8" 
@@ -941,63 +941,64 @@ return (
         </div>
       </section>
 
-      <section
+    <section
   ref={(el) => (sectionsRef.current[3] = el)}
   className="fade-in-section bg-white text-black border-t border-black overflow-hidden"
   style={{ padding: "var(--space-7) 0" }}
   data-testid="section-case-studies"
 >
-  <div className="max-w-[1400px] mx-auto" style={{ paddingLeft: "var(--space-3)", paddingRight: "var(--space-3)" }}>
-    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight tracking-tight" data-testid="text-case-studies-heading">
+    <div className="w-full px-[var(--space-3)]">
+    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight tracking-tight">
       Selected work
     </h2>
-  </div>
 
-  <div
-    className="relative w-full py-20 flex justify-center select-none"
-    onTouchStart={handleTouchStart}
-    onTouchEnd={handleTouchEnd}
-  >
-    <div className="relative h-[520px] w-full max-w-6xl overflow-visible flex items-center justify-center">
-
-     {caseStudyCards.map((card, i) => {
-  const offset = i - activeCard;
-  const abs = Math.abs(offset);
-
-  return (
-    <Link
-      key={i}
-      href={card.href}
-      className="absolute transition-all duration-500 cursor-pointer"
-      style={{
-        transform: `
-          translateX(${offset * 140}px)
-          scale(${1 - abs * 0.08})
-        `,
-        opacity: abs > 3 ? 0 : 1 - abs * 0.12,
-        zIndex: 100 - abs
-      }}
-      onClick={() => setActiveCard(i)}
+    <div
+      className="relative w-full py-20 flex justify-center select-none"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
-      <div className="w-[340px] md:w-[420px] h-[480px] bg-white border border-black shadow-sm">
-        <img
-          src={card.image}
-          className="w-full h-2/3 object-contain pt-6"
-        />
-        <div className="px-6 py-5">
-          <p className="text-xs uppercase tracking-wider opacity-80 mb-1">{card.category}</p>
-          <p className="text-2xl font-bold mb-2">{card.title}</p>
-          <p className="text-sm opacity-80">{card.description}</p>
-        </div>
+      <div className="relative h-[520px] w-full overflow-visible">
+
+        {caseStudyCards.map((card, i) => {
+          const offset = i - activeCard;
+          const abs = Math.abs(offset);
+
+          return (
+            <Link
+              key={i}
+              href={card.href}
+              className="absolute transition-all duration-500 cursor-pointer"
+              style={{
+                transform: `
+                  translateX(${offset * 140}px)
+                  scale(${1 - abs * 0.08})
+                `,
+                opacity: abs > 3 ? 0 : 1 - abs * 0.12,
+                zIndex: 100 - abs
+              }}
+              onClick={() => setActiveCard(i)}
+            >
+              <div className="w-[340px] md:w-[420px] aspect-square bg-white border border-black shadow-sm">
+                <img
+                  src={card.image}
+                  className="w-full h-2/3 object-contain pt-6"
+                />
+                <div className="px-6 py-5">
+                  <p className="text-xs uppercase tracking-wider opacity-80 mb-1">{card.category}</p>
+                  <p className="text-2xl font-bold mb-2">{card.title}</p>
+                  <p className="text-sm opacity-80">{card.description}</p>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+
       </div>
-    </Link>
-  );
-})}
-
-
     </div>
   </div>
 </section>
+
+
 
       <section
         id="contact-section"
