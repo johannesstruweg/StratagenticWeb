@@ -20,7 +20,7 @@ const automations = [
 id: "prospect-intel",
 category: "Sales intelligence",
 title: "Prospect Intelligence",
-description: "Instant AI research, LinkedIn profile analysis, and personalised outreach insights",
+description: "Instant personalized research, analysis + outreach insights",
 demoUrl: "https://stratagenticprospectintel.msagent.ai/",
 image: ProspectImage,
 hidden: false
