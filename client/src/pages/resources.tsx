@@ -16,13 +16,14 @@ const automations = [
     hidden: false
   },
   {
-    id: "prospect-research",
+    id: "prospect-intel",
     category: "Sales intelligence",
-    title: "AI prospect research",
-    description: "Automated AI company research + lead qualification",
-    demoUrl: "/demos/prospect-research",
-    image: ComingSoonImage,
+    title: "Prospect Intelligence",
+    description: "Instant AI research, LinkedIn profile analysis, and personalised outreach insights",
+    demoUrl: "https://stratagenticprospectintel.msagent.ai/
+    image: promptimproverImage,
     hidden: false
+      
   },
   {
     id: "data-extraction",
