@@ -3,7 +3,7 @@ import { Header } from "@/components/header";
 import { X, ExternalLink } from "lucide-react";
 import promptimproverImage from "@assets/images/Demo_Promptodactyl.jpg";
 import ComingSoonImage from "@assets/images/ComingSoon.webp";
-import ProspectImage from "@assets/images/ProspectIntelDemo.png";
+import ProspectImage from "@assets/images/DemoPicture.png";
 
 // Sample automation card data - replace with your actual automations
 const automations = [
