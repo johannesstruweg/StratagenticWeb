@@ -27,19 +27,19 @@ export function Header() {
           onMouseLeave={() => setMenuOpen(false)}
         >
 
-          {/* DROPDOWN — top aligned with logo top */}
+          {/* Dropdown — PERFECTLY aligned to the TOP of the header row */}
           <div
             className={`
               absolute right-0 top-0
               sm:static
+
               flex flex-col sm:flex-row
               gap-4 sm:gap-6
               text-right sm:text-left
-              transition-all duration-200 ease-out
 
-              ${menuOpen 
-                ? "opacity-100 pointer-events-auto" 
-                : "opacity-0 pointer-events-none"}
+              /* Fade only, no movement */
+              transition-opacity duration-150
+              ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
             `}
           >
             <Link href="/resources" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
@@ -56,10 +56,11 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Burger — disappears when menu opens */}
+          {/* Burger — disappears in place */}
           <button
             className={`
-              p-2 absolute right-0 transition-all duration-200
+              p-2 absolute right-0
+              transition-opacity duration-150
               ${menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}
             `}
             onClick={() => setMenuOpen(true)}
@@ -69,6 +70,7 @@ export function Header() {
           </button>
 
         </div>
+
       </div>
     </header>
   );
