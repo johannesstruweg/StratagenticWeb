@@ -30,7 +30,7 @@ export function Header() {
           {/* Dropdown — PERFECTLY aligned to the TOP of the header row */}
           <div
             className={`
-              p-2 absolute right-0 top-0
+              p-0 absolute right-0 top-0
               sm:static
 
               flex flex-col sm:flex-row
