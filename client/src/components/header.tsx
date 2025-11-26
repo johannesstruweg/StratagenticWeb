@@ -27,13 +27,11 @@ export function Header() {
           onMouseLeave={() => setMenuOpen(false)}
         >
 
-          {/* Menu that appears exactly where the burger sat, aligned with logo */}
+          {/* DROPDOWN — top aligned with logo top */}
           <div
             className={`
-              absolute right-0 
-              top-1/2 -translate-y-1/2       /* aligns menu with burger's centerline */
-              sm:static sm:translate-y-0 sm:top-auto
-
+              absolute right-0 top-0
+              sm:static
               flex flex-col sm:flex-row
               gap-4 sm:gap-6
               text-right sm:text-left
@@ -58,16 +56,14 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Burger that disappears */}
+          {/* Burger — disappears when menu opens */}
           <button
             className={`
-              p-2 absolute right-0
-              transition-all duration-200
+              p-2 absolute right-0 transition-all duration-200
               ${menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}
             `}
             onClick={() => setMenuOpen(true)}
             aria-label="Menu"
-            data-testid="button-menu"
           >
             <Menu className="w-6 h-6" />
           </button>
