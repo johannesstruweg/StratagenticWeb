@@ -38,7 +38,7 @@ export function Header() {
               text-right sm:text-left
 
               leading-none              /* remove top text padding */
-              pt-[1px]                  /* optical alignment tweak */
+              pt-[10px]                  /* optical alignment tweak */
 
               transition-opacity duration-150
               ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
