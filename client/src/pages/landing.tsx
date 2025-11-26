@@ -1081,6 +1081,8 @@ return (
            </div>
     </section>
 
+        <Footer />
+    
     </div>
   );
 }
