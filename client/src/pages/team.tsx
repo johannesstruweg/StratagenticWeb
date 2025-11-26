@@ -129,7 +129,7 @@ export default function Team() {
   data-testid="section-founders"
 >
   <div className="max-w-[1400px] mx-auto">
-    <h2 className="text-sm font-bold mb-12 tracking-tight" data-testid="text-founders-heading">
+    <h2 className="text-xl font-bold mb-12 tracking-tight" data-testid="text-founders-heading">
       The Founders
     </h2>
 
