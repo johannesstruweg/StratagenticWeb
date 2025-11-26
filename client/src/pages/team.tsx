@@ -151,7 +151,14 @@ export default function Team() {
           </div>
 
           <div className="mt-4">
-            <h3 className="text-xl font-bold mb-1">Francisco Acasuso</h3>
+            <a
+              href="https://www.linkedin.com/in/franciscoacasuso/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl font-bold mb-1 hover:text-[#2563EB] transition-colors cursor-pointer no-underline"
+            >
+              Francisco Acasuso
+            </a>
             <p className="text-sm text-gray-600">Co-founder and CEO</p>
           </div>
         </div>
@@ -169,7 +176,6 @@ export default function Team() {
               <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Leading high-impact innovation projects</li>
             </ul>
 
-            {/* Experience aligned here */}
             <div className="mt-8">
               <h4 className="text-sm font-bold mb-3">Previous Experience:</h4>
               <div className="flex flex-wrap gap-2">
@@ -203,7 +209,14 @@ export default function Team() {
           </div>
 
           <div className="mt-4">
-            <h3 className="text-xl font-bold mb-1">Johannes Struweg</h3>
+            <a
+              href="https://www.linkedin.com/in/janesstruweg/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl font-bold mb-1 hover:text-[#2563EB] transition-colors cursor-pointer no-underline"
+            >
+              Johannes Struweg
+            </a>
             <p className="text-sm text-gray-600">Co-founder and COO</p>
           </div>
         </div>
@@ -221,7 +234,6 @@ export default function Team() {
               <li className="flex items-start"><span className="mr-2 text-[#2563EB]">→</span>Advisory to leadership teams</li>
             </ul>
 
-            {/* Experience aligned here */}
             <div className="mt-8">
               <h4 className="text-sm font-bold mb-3">Previous Experience:</h4>
               <div className="flex flex-wrap gap-2">
@@ -243,8 +255,6 @@ export default function Team() {
     </div>
   </div>
 </section>
-
-
 
    {/* Footer */}
       <footer
