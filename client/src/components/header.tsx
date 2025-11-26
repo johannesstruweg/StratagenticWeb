@@ -27,17 +27,19 @@ export function Header() {
           onMouseLeave={() => setMenuOpen(false)}
         >
 
-          {/* Dropdown — PERFECTLY aligned to the TOP of the header row */}
+          {/* DROPDOWN — aligned by raw container AND text corrected */}
           <div
             className={`
               absolute right-0 top-0
               sm:static
 
               flex flex-col sm:flex-row
-              gap-4 sm:gap-4
+              gap-3 sm:gap-6
               text-right sm:text-left
 
-              /* Fade only, no movement */
+              leading-none              /* remove top text padding */
+              pt-[1px]                  /* optical alignment tweak */
+
               transition-opacity duration-150
               ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
             `}
@@ -56,7 +58,7 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Burger — disappears in place */}
+          {/* Burger */}
           <button
             className={`
               p-2 absolute right-0
