@@ -238,9 +238,9 @@ return (
   </div>
 </div>
 
-</section> 
-        
-      {/* CTA */}
+</section>    {/* <--- THIS WAS MISSING */}
+
+{/* CTA */}
 <section 
   className="bg-white text-black border-t border-black"
   style={{ padding: "var(--space-8) var(--space-3)" }}
@@ -252,7 +252,7 @@ return (
     </h2>
 
     <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Let Stratagentic show you how automation can expand your outbound reach and improve every sales interaction.
+      Let Stratagentic show you how automation can expand your outbound reach and improve every sales interaction.
     </p>
 
     <a
