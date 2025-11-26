@@ -268,7 +268,7 @@ return (
   </div>
 </section>
 
-           {/* Footer */}
+               {/* Footer */}
       <footer 
         className="bg-white text-black border-t border-gray-300 py-6" 
         style={{ padding: "var(--space-4) var(--space-3)" }}
@@ -277,8 +277,6 @@ return (
           © 2025 Stratagentic. Built in Norway.
         </div>
       </footer>
-
-    </div>  {/* closes <div className="min-h-screen ..."> */}
-
-  );        {/* closes return */}
-}          {/* closes component */}
+    </div>
+  );
+}
