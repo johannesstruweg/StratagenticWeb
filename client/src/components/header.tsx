@@ -11,85 +11,83 @@ export function Header() {
       <div className="max-w-[1400px] mx-auto flex justify-between items-center">
 
         {/* Logo */}
-        <div>
-          <Link href="/">
-            <img 
-              src={logoImage}
-              alt="Stratagentic" 
-              className="h-10 w-auto cursor-pointer object-contain"
-              style={{ filter: "invert(1)" }}
-              data-testid="img-logo"
-            />
-          </Link>
-        </div>
+        <Link href="/">
+          <img
+            src={logoImage}
+            alt="Stratagentic"
+            className="h-10 w-auto cursor-pointer object-contain"
+            style={{ filter: "invert(1)" }}
+            data-testid="img-logo"
+          />
+        </Link>
 
         {/* Menu wrapper */}
-        <div 
+        <div
           className="relative flex items-center"
           onMouseEnter={() => setMenuOpen(true)}
           onMouseLeave={() => setMenuOpen(false)}
         >
 
-          {/* Dropdown list – positioned under burger, vertical on mobile */}
+          {/* Dropdown – positioned exactly at burger, not below */}
           <div
             className={`
-              absolute right-0 top-full mt-2
-              sm:static sm:mt-0
+              absolute right-0 top-0
+              translate-y-8           /* dropdown starts at the burger position */
+              sm:static sm:translate-y-0
               flex flex-col sm:flex-row
               gap-4 sm:gap-6
               text-right sm:text-left
               transition-all duration-300 ease-out
-              ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"}
+              ${
+                menuOpen
+                  ? "opacity-100 translate-y-8 pointer-events-auto"
+                  : "opacity-0 translate-y-6 pointer-events-none"
+              }
             `}
           >
-            <Link 
+            <Link
               href="/resources"
               className="text-sm hover:text-[#2563EB] whitespace-nowrap"
-              data-testid="link-menu-resources"
             >
               Resources
             </Link>
 
-            <Link 
+            <Link
               href="/faq"
               className="text-sm hover:text-[#2563EB] whitespace-nowrap"
-              data-testid="link-menu-faqs"
             >
               FAQs
             </Link>
 
-            <Link 
+            <Link
               href="/team"
               className="text-sm hover:text-[#2563EB] whitespace-nowrap"
-              data-testid="link-menu-team"
             >
               Team
             </Link>
 
-            <Link 
+            <Link
               href="/"
               className="text-sm hover:text-[#2563EB] whitespace-nowrap"
-              data-testid="link-menu-home"
             >
               Home
             </Link>
           </div>
 
-          {/* Burger – disappears when menu is open */}
+          {/* Burger – disappears when expanded */}
           <button
             className={`
-              p-2 absolute right-0 transition-all duration-300 
+              p-2 absolute right-0 transition-all duration-200
               ${menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}
             `}
             onClick={() => setMenuOpen(true)}
-            data-testid="button-menu"
             aria-label="Menu"
+            data-testid="button-menu"
           >
             <Menu className="w-6 h-6" />
           </button>
 
         </div>
-
       </div>
     </header>
   );
