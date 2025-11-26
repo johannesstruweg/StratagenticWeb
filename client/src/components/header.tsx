@@ -7,60 +7,42 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header style={{ padding: "var(--space-3)" }}>
+    <header className="py-2 px-3">  {/* Reduced vertical padding */}
       <div className="max-w-[1400px] mx-auto flex justify-between items-center">
         
         {/* Logo */}
-        <div>
-          <Link href="/">
-            <img
-              src={logoImage}
-              alt="Stratagentic"
-              className="h-10 w-auto cursor-pointer object-contain"
-              style={{ filter: 'invert(1)' }}
-              data-testid="img-logo"
-            />
-          </Link>
-        </div>
+        <Link href="/">
+          <img 
+            src={logoImage}
+            alt="Stratagentic" 
+            className="h-10 w-auto cursor-pointer object-contain"
+            style={{ filter: 'invert(1)' }}
+            data-testid="img-logo"
+          />
+        </Link>
 
-        {/* Menu */}
-        <div
-          className="relative flex items-center overflow-hidden"
-          onMouseEnter={() => setMenuOpen(true)}
-          onMouseLeave={() => setMenuOpen(false)}
-          onClick={() => setMenuOpen(prev => !prev)} // mobile toggle
-        >
+        {/* Menu Wrapper */}
+        <div className="relative">
+
+          {/* Dropdown Menu */}
           <div
             className={`
-              flex gap-4 transition-all duration-300 ease-out
-              ${menuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'}
-              flex-col sm:flex-row
-              text-right sm:text-left
+              absolute right-0 top-full mt-2
+              flex flex-col bg-white text-black border border-black p-4
+              transition-all duration-200
+              ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
             `}
           >
-            <Link href="/resources" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
-              Resources
-            </Link>
-
-            <Link href="/faq" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
-              FAQs
-            </Link>
-
-            <Link href="/team" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
-              Team
-            </Link>
-
-            <Link href="/" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
-              Home
-            </Link>
+            <Link href="/resources" className="py-1 text-sm hover:text-[#2563EB]">Resources</Link>
+            <Link href="/faq" className="py-1 text-sm hover:text-[#2563EB]">FAQs</Link>
+            <Link href="/team" className="py-1 text-sm hover:text-[#2563EB]">Team</Link>
+            <Link href="/" className="py-1 text-sm hover:text-[#2563EB]">Home</Link>
           </div>
 
+          {/* Burger Button */}
           <button
-            className={`
-              p-2 absolute right-0 transition-all duration-300 ease-out cursor-pointer
-              ${menuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}
-            `}
-            data-testid="button-menu"
+            className="p-2"
+            onClick={() => setMenuOpen(prev => !prev)}
             aria-label="Menu"
           >
             <Menu className="w-6 h-6" />
