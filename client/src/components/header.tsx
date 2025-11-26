@@ -30,11 +30,11 @@ export function Header() {
           {/* Dropdown — PERFECTLY aligned to the TOP of the header row */}
           <div
             className={`
-              p-0 absolute right-0 top-0
+              absolute right-0 top-0
               sm:static
 
               flex flex-col sm:flex-row
-              gap-4 sm:gap-6
+              gap-4 sm:gap-4
               text-right sm:text-left
 
               /* Fade only, no movement */
