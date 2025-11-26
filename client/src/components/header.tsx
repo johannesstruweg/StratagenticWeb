@@ -27,20 +27,21 @@ export function Header() {
           onMouseLeave={() => setMenuOpen(false)}
         >
 
-          {/* Dropdown appears *exactly* where burger was */}
+          {/* Menu that appears exactly where the burger sat, aligned with logo */}
           <div
             className={`
-              absolute right-0 top-0
+              absolute right-0 
+              top-1/2 -translate-y-1/2       /* aligns menu with burger's centerline */
+              sm:static sm:translate-y-0 sm:top-auto
+
               flex flex-col sm:flex-row
               gap-4 sm:gap-6
               text-right sm:text-left
               transition-all duration-200 ease-out
 
-              ${
-                menuOpen
-                  ? "opacity-100 translate-y-0 pointer-events-auto"
-                  : "opacity-0 -translate-y-2 pointer-events-none"
-              }
+              ${menuOpen 
+                ? "opacity-100 pointer-events-auto" 
+                : "opacity-0 pointer-events-none"}
             `}
           >
             <Link href="/resources" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
@@ -57,20 +58,21 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Burger disappears and menu replaces it */}
+          {/* Burger that disappears */}
           <button
             className={`
-              p-2 absolute right-0 transition-all duration-200
+              p-2 absolute right-0
+              transition-all duration-200
               ${menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}
             `}
             onClick={() => setMenuOpen(true)}
             aria-label="Menu"
+            data-testid="button-menu"
           >
             <Menu className="w-6 h-6" />
           </button>
 
         </div>
-
       </div>
     </header>
   );
