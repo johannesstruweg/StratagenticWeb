@@ -1078,8 +1078,12 @@ return (
               </a>
             </p>
           </div>
-        </div>
-      </section>
+           </div>
+    </section>
+
+    </div>
+  );
+}
 
 export function Footer() {
   const [showPrivacy, setShowPrivacy] = useState(false);
