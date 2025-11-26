@@ -1092,7 +1092,7 @@ export function Footer() {
 
   return (
     <>
-     {showPrivacy && (
+   {showPrivacy && (
   <div
     className="fixed bottom-4 right-4 bg-white text-black p-4 max-w-sm w-full border border-black text-sm shadow-xl rounded-none z-50"
   >
@@ -1103,11 +1103,14 @@ export function Footer() {
       ×
     </button>
 
-      <strong>NOV2025 Privacy:</strong> We don’t track you or profile you. The only info we get is what you send us directly.
+    <p>
+      <strong>NOV2025 Privacy:</strong> We don’t track you or profile you. The only info we get is what you
+      send us directly.
     </p>
 
     <p className="mt-2">
-      <strong>Cookies:</strong> No analytics, marketing or tracking cookies. Anything set is only to keep the site working.
+      <strong>Cookies:</strong> No analytics, marketing or tracking cookies. Anything set is only to
+      keep the site working.
     </p>
 
     <p className="mt-2">
