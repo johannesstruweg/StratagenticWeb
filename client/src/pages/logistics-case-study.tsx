@@ -230,30 +230,34 @@ export default function LogisticsCaseStudy() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section 
-        className="bg-white text-black border-t border-black"
-        style={{ padding: "var(--space-8) var(--space-3)" }}
-        data-testid="section-cta"
-      >
-        <div className="max-w-[1400px] mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-tight">
-            Want to make logistics move smoother?
-          </h2>
-          <p className="text-lg max-w-3xl mx-auto mb-8 leading-relaxed">
+     {/* CTA */}
+<section 
+  className="bg-white text-black border-t border-black"
+  style={{ padding: "var(--space-8) var(--space-3)" }}
+  data-testid="section-cta"
+>
+  <div className="max-w-[1400px] mx-auto text-center">
+    <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-tight">
+      Stay visible. Stay consistent. Effortlessly.
+    </h2>
+
+    <p className="text-lg mb-8 max-w-2xl mx-auto">
             Let's explore how Stratagentic's AI agents can optimize coordination, tracking, and communication in your supply chain.
-          </p>
-          <Link href="/#contact-section">
-            <button 
-              className="inline-flex items-center justify-center bg-black text-white px-6 py-3 text-sm hover-elevate active-elevate-2 transition-all"
-              data-testid="button-cta"
-            >
-              <span className="mr-2">→</span>
-              Book a Discovery Call
-            </button>
-          </Link>
-        </div>
-      </section>
+    </p>
+
+    <a
+      href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2FhPPI14Fl5-rFUIdZfHTuUZ-9mkRrAKajJng7tz4625p1TZ0-VNTIsx-9fnnXns1x91A0Xz5Q"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center bg-black text-white px-6 py-3 text-sm hover-elevate active-elevate-2 transition-all"
+      data-testid="button-cta"
+    >
+      <span className="mr-2">→</span>
+      Book a discovery call
+    </a>
+  </div>
+</section>
+
     </div>
   );
 }
