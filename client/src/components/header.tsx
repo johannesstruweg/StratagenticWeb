@@ -17,7 +17,6 @@ export function Header() {
             alt="Stratagentic"
             className="h-10 w-auto cursor-pointer object-contain"
             style={{ filter: "invert(1)" }}
-            data-testid="img-logo"
           />
         </Link>
 
@@ -28,53 +27,37 @@ export function Header() {
           onMouseLeave={() => setMenuOpen(false)}
         >
 
-          {/* Dropdown – positioned exactly at burger, not below */}
+          {/* Dropdown appears *exactly* where burger was */}
           <div
             className={`
               absolute right-0 top-0
-              translate-y-8           /* dropdown starts at the burger position */
-              sm:static sm:translate-y-0
               flex flex-col sm:flex-row
               gap-4 sm:gap-6
               text-right sm:text-left
-              transition-all duration-300 ease-out
+              transition-all duration-200 ease-out
+
               ${
                 menuOpen
-                  ? "opacity-100 translate-y-8 pointer-events-auto"
-                  : "opacity-0 translate-y-6 pointer-events-none"
+                  ? "opacity-100 translate-y-0 pointer-events-auto"
+                  : "opacity-0 -translate-y-2 pointer-events-none"
               }
             `}
           >
-            <Link
-              href="/resources"
-              className="text-sm hover:text-[#2563EB] whitespace-nowrap"
-            >
+            <Link href="/resources" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               Resources
             </Link>
-
-            <Link
-              href="/faq"
-              className="text-sm hover:text-[#2563EB] whitespace-nowrap"
-            >
+            <Link href="/faq" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               FAQs
             </Link>
-
-            <Link
-              href="/team"
-              className="text-sm hover:text-[#2563EB] whitespace-nowrap"
-            >
+            <Link href="/team" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               Team
             </Link>
-
-            <Link
-              href="/"
-              className="text-sm hover:text-[#2563EB] whitespace-nowrap"
-            >
+            <Link href="/" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               Home
             </Link>
           </div>
 
-          {/* Burger – disappears when expanded */}
+          {/* Burger disappears and menu replaces it */}
           <button
             className={`
               p-2 absolute right-0 transition-all duration-200
@@ -82,12 +65,12 @@ export function Header() {
             `}
             onClick={() => setMenuOpen(true)}
             aria-label="Menu"
-            data-testid="button-menu"
           >
             <Menu className="w-6 h-6" />
           </button>
 
         </div>
+
       </div>
     </header>
   );
