@@ -237,10 +237,10 @@ return (
     <p className="font-bold">Reporting Dashboard</p>
   </div>
 </div>
+        </div>
+      </section>
 
-</section>    {/* <--- THIS WAS MISSING */}
-
-{/* CTA */}
+      {/* CTA */}
 <section 
   className="bg-white text-black border-t border-black"
   style={{ padding: "var(--space-8) var(--space-3)" }}
