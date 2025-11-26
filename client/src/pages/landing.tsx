@@ -1081,14 +1081,11 @@ return (
         </div>
       </section>
 
-   import { useState } from "react";
-
 export function Footer() {
   const [showPrivacy, setShowPrivacy] = useState(false);
 
   return (
     <>
-      {/* Privacy Popup */}
       {showPrivacy && (
         <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center">
           <div className="bg-white text-black p-6 max-w-sm w-full border border-black rounded-none shadow-xl text-sm relative">
@@ -1125,7 +1122,6 @@ export function Footer() {
         </div>
       )}
 
-      {/* Footer */}
       <footer
         className="bg-white text-black border-t border-black"
         style={{ padding: "var(--space-5) var(--space-3)" }}
@@ -1136,7 +1132,6 @@ export function Footer() {
             © 2025 Stratagentic – All rights reserved. AI-assisted, human-approved
           </p>
 
-          {/* Privacy Link */}
           <button
             onClick={() => setShowPrivacy(true)}
             className="text-sm hover:text-[#2563EB] transition-colors cursor-pointer"
@@ -1149,4 +1144,3 @@ export function Footer() {
     </>
   );
 }
-
