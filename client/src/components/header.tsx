@@ -8,12 +8,14 @@ export function Header() {
 
   return (
     <header style={{ padding: "var(--space-3)" }}>
-      <div className="max-w-[1400px] mx-auto flex justify-between items-start">
+      <div className="max-w-[1400px] mx-auto flex justify-between items-center">
+        
+        {/* Logo */}
         <div>
           <Link href="/">
-            <img 
+            <img
               src={logoImage}
-              alt="Stratagentic" 
+              alt="Stratagentic"
               className="h-10 w-auto cursor-pointer object-contain"
               style={{ filter: 'invert(1)' }}
               data-testid="img-logo"
@@ -21,50 +23,43 @@ export function Header() {
           </Link>
         </div>
 
-        <div 
+        {/* Menu */}
+        <div
           className="relative flex items-center overflow-hidden"
           onMouseEnter={() => setMenuOpen(true)}
           onMouseLeave={() => setMenuOpen(false)}
+          onClick={() => setMenuOpen(prev => !prev)} // mobile toggle
         >
-          <div 
-            className={`flex items-center gap-6 transition-all duration-300 ease-out 
-            ${menuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'}`}
+          <div
+            className={`
+              flex gap-4 transition-all duration-300 ease-out
+              ${menuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'}
+              flex-col sm:flex-row
+              text-right sm:text-left
+            `}
           >
-             <Link 
-              href="/resources" 
-              className="text-sm hover:text-[#2563EB] transition-colors whitespace-nowrap"
-              data-testid="link-menu-resources"
-            >
+            <Link href="/resources" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               Resources
             </Link>
-            <Link 
-              href="/faq" 
-              className="text-sm hover:text-[#2563EB] transition-colors whitespace-nowrap"
-              data-testid="link-menu-faqs"
-            >
+
+            <Link href="/faq" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               FAQs
             </Link>
-            <Link 
-              href="/team"
-              className="text-sm hover:text-[#2563EB] transition-colors whitespace-nowrap"
-              data-testid="link-menu-team"
-            >
+
+            <Link href="/team" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               Team
             </Link>
-           
-            {/* NEW: Home link */}
-            <Link 
-              href="/" 
-              className="text-sm hover:text-[#2563EB] transition-colors whitespace-nowrap"
-              data-testid="link-menu-home"
-            >
+
+            <Link href="/" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               Home
             </Link>
           </div>
 
-          <button 
-            className={`p-2 absolute right-0 transition-all duration-300 ease-out cursor-pointer 
-            ${menuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+          <button
+            className={`
+              p-2 absolute right-0 transition-all duration-300 ease-out cursor-pointer
+              ${menuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+            `}
             data-testid="button-menu"
             aria-label="Menu"
           >
