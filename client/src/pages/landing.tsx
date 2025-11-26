@@ -51,6 +51,17 @@ export default function Landing() {
     expansion: false,
     operations: false,
   });
+  
+useEffect(() => {
+  if (window.location.hash === "#contact-section") {
+    const el = document.getElementById("contact-section");
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    }
+  }
+}, []);
 
   const [expandedServices, setExpandedServices] = useState<{
     intelligence: boolean;
