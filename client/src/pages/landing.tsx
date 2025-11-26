@@ -1104,25 +1104,25 @@ export function Footer() {
     </button>
 
     <p>
-      <strong>NOV2025 Privacy:</strong> We don’t track you or profile you. The only info we get is what you
+      <strong>NOV2025: Privacy</strong> We don’t track you or profile you. The only info we get is what you
       send us directly.
     </p>
 
     <p className="mt-2">
-      <strong>Cookies:</strong> No analytics, marketing or tracking cookies. Anything set is only to
+      <strong>Cookies</strong> No analytics, marketing or tracking cookies. Anything set is only to
       keep the site working.
     </p>
 
     <p className="mt-2">
-      <strong>Use of info:</strong> If you contact us, we use your details only to reply.
+      <strong>Use of info</strong> If you contact us, we use your details only to reply.
     </p>
 
     <p className="mt-2">
-      <strong>Your rights:</strong> You can ask to see, change or delete any info you’ve shared.
+      <strong>Your rights</strong> You can ask to see, change or delete any info you’ve shared.
     </p>
 
     <p className="mt-2">
-      <strong>Contact:</strong> hello@stratagentic.no
+      <strong>Contact</strong> hello@stratagentic.no
     </p>
   </div>
 )}
