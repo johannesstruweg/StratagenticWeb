@@ -1081,17 +1081,72 @@ return (
         </div>
       </section>
 
-      <footer
-        className="bg-white text-black border-t border-black"
-        style={{ padding: "var(--space-5) var(--space-3)" }}
-        data-testid="footer"
-      >
-        <div className="max-w-[1400px] mx-auto text-sm">
-          <p data-testid="text-footer">
-            © 2025 Stratagentic – All rights reserved. AI-assisted, human-approved
-          </p>
-        </div>
-      </footer>
-    </div> 
-  );
+   import { useState } from "react";
+
+export function Footer() {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+
+  return (
+    <>
+      {/* Privacy Popup */}
+      {showPrivacy && (
+        <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center">
+          <div className="bg-white text-black p-6 max-w-sm w-full border border-black rounded-none shadow-xl text-sm relative">
+            <button
+              onClick={() => setShowPrivacy(false)}
+              className="absolute top-2 right-2 text-black hover:text-[#2563EB] transition-colors"
+            >
+              ×
+            </button>
+
+            <p>
+              <strong>Privacy:</strong> We don’t track you or profile you. The only info we get is what you
+              send us directly. Our host creates basic technical logs so the site runs safely, and we don’t
+              use them for anything else.
+            </p>
+
+            <p className="mt-3">
+              <strong>Cookies:</strong> No analytics, marketing or tracking cookies. Anything set is only to
+              keep the site working.
+            </p>
+
+            <p className="mt-3">
+              <strong>Use of info:</strong> If you contact us, we use your details only to reply.
+            </p>
+
+            <p className="mt-3">
+              <strong>Your rights:</strong> You can ask to see, change or delete any info you’ve shared.
+            </p>
+
+            <p className="mt-3">
+              <strong>Contact:</strong> hello@stratagentic.no, Stratagentic AS, Stavanger.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Footer */}
+      <footer
+        className="bg-white text-black border-t border-black"
+        style={{ padding: "var(--space-5) var(--space-3)" }}
+        data-testid="footer"
+      >
+        <div className="max-w-[1400px] mx-auto text-sm flex justify-between items-center">
+          <p data-testid="text-footer">
+            © 2025 Stratagentic – All rights reserved. AI-assisted, human-approved
+          </p>
+
+          {/* Privacy Link */}
+          <button
+            onClick={() => setShowPrivacy(true)}
+            className="text-sm hover:text-[#2563EB] transition-colors cursor-pointer"
+            data-testid="footer-privacy"
+          >
+            Privacy
+          </button>
+        </div>
+      </footer>
+    </>
+  );
 }
+
