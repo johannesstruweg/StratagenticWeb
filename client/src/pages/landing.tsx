@@ -1103,9 +1103,6 @@ export function Footer() {
       ×
     </button>
 
-    <p>
-      <strong>NOV2025 </strong>
-    <p>
       <strong>NOV2025 Privacy:</strong> We don’t track you or profile you. The only info we get is what you send us directly.
     </p>
 
