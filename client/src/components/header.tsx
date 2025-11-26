@@ -14,7 +14,7 @@ export function Header() {
             <img 
               src={logoImage}
               alt="Stratagentic" 
-              className="h-10 cursor-pointer"
+              className="h-10 w-auto cursor-pointer object-contain"
               style={{ filter: 'invert(1)' }}
               data-testid="img-logo"
             />
