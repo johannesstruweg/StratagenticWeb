@@ -238,7 +238,8 @@ return (
   </div>
 </div>
 
-
+</section> 
+        
       {/* CTA */}
 <section 
   className="bg-white text-black border-t border-black"
