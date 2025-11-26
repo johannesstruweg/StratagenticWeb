@@ -1092,18 +1092,19 @@ export function Footer() {
 
   return (
     <>
-      {showPrivacy && (
-        <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center">
-          <div className="bg-white text-black p-6 max-w-sm w-full border border-black rounded-none shadow-xl text-sm relative">
-            <button
-              onClick={() => setShowPrivacy(false)}
-              className="absolute top-2 right-2 text-black hover:text-[#2563EB] transition-colors"
-            >
-              ×
-            </button>
+     {showPrivacy && (
+  <div
+    className="fixed bottom-4 right-4 bg-white text-black p-4 max-w-sm w-full border border-black text-sm shadow-xl rounded-none z-50"
+  >
+    <button
+      onClick={() => setShowPrivacy(false)}
+      className="absolute top-2 right-2 text-black hover:text-[#2563EB] transition-colors"
+    >
+      ×
+    </button>
 
             <p>
-              <strong>Privacy:</strong> We don’t track you or profile you. The only info we get is what you
+              <strong>NOV2025 Privacy:</strong> We don’t track you or profile you. The only info we get is what you
               send us directly. Our host creates basic technical logs so the site runs safely, and we don’t
               use them for anything else.
             </p>
@@ -1122,7 +1123,7 @@ export function Footer() {
             </p>
 
             <p className="mt-3">
-              <strong>Contact:</strong> hello@stratagentic.no, Stratagentic AS, Stavanger.
+              <strong>Contact:</strong> hello@stratagentic.no
             </p>
           </div>
         </div>
