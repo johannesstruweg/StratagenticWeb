@@ -747,6 +747,27 @@ return (
         </div>
       </section>
 
+    {/* Testimonial Block */}
+<section 
+  className="bg-white text-black"
+  style={{ padding: "var(--space-7) var(--space-3)" }}
+  data-testid="section-testimonial"
+>
+  <div className="max-w-[900px] mx-auto">
+    <blockquote className="italic text-xl text-[#2563EB] leading-relaxed mb-4">
+      “We needed a practical approach to AI that fit our reality as an engineering manufacturer. 
+      This workshop delivered exactly that, no hype, just relevant examples and a clear process 
+      for identifying where we should focus our efforts. The opportunity report gives us a roadmap 
+      we can build on, and I'm confident we're starting in the right place.”
+    </blockquote>
+
+    <p className="text-base not-italic font-bold text-black opacity-80">
+      Svein W. Kristiansen, GM, Smed
+    </p>
+  </div>
+</section>
+
+
       <section
         ref={(el) => (sectionsRef.current[2] = el)}
         className="fade-in-section bg-white text-black"
