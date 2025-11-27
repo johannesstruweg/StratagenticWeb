@@ -2,14 +2,19 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Menu } from "lucide-react";
 import logoImage from "@assets/Stratagentic_White_1762185093889.png";
+import { useLang } from "@/i18n/LanguageProvider";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { code, setLangCode } = useLang();
+
+  const nextLanguageLabel = code === "en" ? "Norsk" : "English";
+  const nextLanguageCode = code === "en" ? "no" : "en";
 
   return (
     <header className="py-2 px-3">
       <div className="max-w-[1400px] mx-auto flex justify-between items-center">
-
+        
         {/* Logo */}
         <Link href="/">
           <img
@@ -26,8 +31,8 @@ export function Header() {
           onMouseEnter={() => setMenuOpen(true)}
           onMouseLeave={() => setMenuOpen(false)}
         >
-
-          {/* DROPDOWN — aligned by raw container AND text corrected */}
+          
+          {/* DROPDOWN */}
           <div
             className={`
               absolute right-0 top-0
@@ -37,13 +42,22 @@ export function Header() {
               gap-3 sm:gap-6
               text-right sm:text-left
 
-              leading-none              /* remove top text padding */
-              -mt-[8px]                 /* optical alignment tweak */
+              leading-none
+              -mt-[8px]
 
               transition-opacity duration-150
               ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
             `}
           >
+
+            {/* LANGUAGE SWITCH — FIRST MENU ITEM */}
+            <button
+              onClick={() => setLangCode(nextLanguageCode)}
+              className="text-sm hover:text-[#2563EB] whitespace-nowrap"
+            >
+              {nextLanguageLabel}
+            </button>
+
             <Link href="/resources" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               Resources
             </Link>
@@ -56,9 +70,10 @@ export function Header() {
             <Link href="/" className="text-sm hover:text-[#2563EB] whitespace-nowrap">
               Home
             </Link>
+
           </div>
 
-          {/* Burger */}
+          {/* Burger Icon */}
           <button
             className={`
               p-2 absolute right-0
@@ -72,7 +87,6 @@ export function Header() {
           </button>
 
         </div>
-
       </div>
     </header>
   );
