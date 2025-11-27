@@ -763,16 +763,14 @@ return (
   data-testid="section-testimonial"
 >
   <div className="max-w-[1300px] mx-auto">
-    <blockquote className="italic text-xl text-[#2563EB] leading-relaxed mb-4">
-      “We needed a practical approach to AI that fit our reality as an engineering manufacturer. 
-      Stratagentic delivered exactly that, no hype, just relevant examples and a clear process 
-      for identifying where we should focus our efforts. The Opportunity Report gives us a roadmap 
-      we can build on, and I'm confident we're starting in the right place.”
-    </blockquote>
+   <blockquote className="italic text-xl text-[#2563EB] leading-relaxed mb-4">
+  {lang.testimonialQuote}
+</blockquote>
 
-    <p className="text-base not-italic font-bold text-black opacity-80">
-      Svein W. Kristiansen, GM, Smed
-    </p>
+<p className="text-base not-italic font-bold text-black opacity-80">
+  {lang.testimonialName}
+</p>
+
   </div>
 </section>
 
