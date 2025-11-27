@@ -155,23 +155,21 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
     <div className="space-y-16">
 
       {/* Francisco */}
-      <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
-        <div className="flex flex-col items-start">
-          <div
-            className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-           onMouseMove={(e) => handleScrub(e, photos, setIndex)}
-  onMouseLeave={() => resetPhoto(setIndex)}
+     <div
+  className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
+  onMouseMove={(e) => handleScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
+  onMouseLeave={() => resetPhoto(setFranciscoPhotoIndex)}
+  onTouchStart={(e) => handleTouchScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
+  onTouchMove={(e) => handleTouchScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
+  onTouchEnd={() => resetTouchPhoto(setFranciscoPhotoIndex)}
+>
+  <img 
+    src={franciscoPhotos[franciscoPhotoIndex]}
+    alt="Francisco Acasuso"
+    className="w-full h-full object-cover"
+  />
+</div>
 
-  onTouchStart={(e) => handleTouchScrub(e, photos, setIndex)}
-  onTouchMove={(e) => handleTouchScrub(e, photos, setIndex)}
-  onTouchEnd={() => resetTouchPhoto(setIndex)}
-          >
-            <img 
-              src={franciscoPhotos[franciscoPhotoIndex]}
-              alt="Francisco Acasuso"
-              className="w-full h-full object-cover"
-            />
-          </div>
 
           <div className="mt-4">
             <a
@@ -217,23 +215,21 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
       </div>
 
       {/* Johannes */}
-      <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
-        <div className="flex flex-col items-start">
-          <div
-            className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-           onMouseMove={(e) => handleScrub(e, photos, setIndex)}
-  onMouseLeave={() => resetPhoto(setIndex)}
+      <div
+  className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
+  onMouseMove={(e) => handleScrub(e, johannesPhotos, setJohannesPhotoIndex)}
+  onMouseLeave={() => resetPhoto(setJohannesPhotoIndex)}
+  onTouchStart={(e) => handleTouchScrub(e, johannesPhotos, setJohannesPhotoIndex)}
+  onTouchMove={(e) => handleTouchScrub(e, johannesPhotos, setJohannesPhotoIndex)}
+  onTouchEnd={() => resetTouchPhoto(setJohannesPhotoIndex)}
+>
+  <img 
+    src={johannesPhotos[johannesPhotoIndex]}
+    alt="Johannes Struweg"
+    className="w-full h-full object-cover"
+  />
+</div>
 
-  onTouchStart={(e) => handleTouchScrub(e, photos, setIndex)}
-  onTouchMove={(e) => handleTouchScrub(e, photos, setIndex)}
-  onTouchEnd={() => resetTouchPhoto(setIndex)}
-          >
-            <img 
-              src={johannesPhotos[johannesPhotoIndex]}
-              alt="Johannes Struweg"
-              className="w-full h-full object-cover"
-            />
-          </div>
 
           <div className="mt-4">
             <a
