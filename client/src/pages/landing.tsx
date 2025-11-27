@@ -753,11 +753,11 @@ return (
   style={{ padding: "var(--space-7) var(--space-3)" }}
   data-testid="section-testimonial"
 >
-  <div className="max-w-[900px] mx-auto">
+  <div className="max-w-[1400px] mx-auto">
     <blockquote className="italic text-xl text-[#2563EB] leading-relaxed mb-4">
       “We needed a practical approach to AI that fit our reality as an engineering manufacturer. 
-      This workshop delivered exactly that, no hype, just relevant examples and a clear process 
-      for identifying where we should focus our efforts. The opportunity report gives us a roadmap 
+      Stratagentic delivered exactly that, no hype, just relevant examples and a clear process 
+      for identifying where we should focus our efforts. The Opportunity Report gives us a roadmap 
       we can build on, and I'm confident we're starting in the right place.”
     </blockquote>
 
