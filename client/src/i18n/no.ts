@@ -1,6 +1,6 @@
 export const no = {
-  heroLine1: "La oss gjøre arbeid",
-  heroLine2: "føles som mindre arbeid.",
-  heroDescription: "Uavhengig strategi- og AI-automatiseringsstudio i Norge. Vi beveger oss raskt og kombinerer strategi, design og intelligent automatisering for å gjøre vekst målbar og bærekraftig.",
+  heroLine1: "La oss få arbeidet",
+  heroLine2: "til enklere arbeid.",
+  heroDescription: "Et uavhengig strategi + AI studio. Vi kombinerer strategi, design og intelligente løsninger for å skape målbar vekst - raskt og bærekraftig",
   contactTitle: "Skaler raskere enn noen gang, garanterte resultater.",
 };
