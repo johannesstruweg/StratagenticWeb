@@ -155,21 +155,25 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
     <div className="space-y-16">
 
       {/* Francisco */}
-     <div
-  className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-  onMouseMove={(e) => handleScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
-  onMouseLeave={() => resetPhoto(setFranciscoPhotoIndex)}
-  onTouchStart={(e) => handleTouchScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
-  onTouchMove={(e) => handleTouchScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
-  onTouchEnd={() => resetTouchPhoto(setFranciscoPhotoIndex)}
->
-  <img 
-    src={franciscoPhotos[franciscoPhotoIndex]}
-    alt="Francisco Acasuso"
-    className="w-full h-full object-cover"
-  />
-</div>
+      <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
 
+        {/* Francisco left column */}
+        <div className="flex flex-col items-start">
+
+          <div
+            className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
+            onMouseMove={(e) => handleScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
+            onMouseLeave={() => resetPhoto(setFranciscoPhotoIndex)}
+            onTouchStart={(e) => handleTouchScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
+            onTouchMove={(e) => handleTouchScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
+            onTouchEnd={() => resetTouchPhoto(setFranciscoPhotoIndex)}
+          >
+            <img 
+              src={franciscoPhotos[franciscoPhotoIndex]}
+              alt="Francisco Acasuso"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           <div className="mt-4">
             <a
@@ -183,6 +187,9 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
             <p className="text-sm text-gray-600">Co-founder and CEO</p>
           </div>
 
+        </div>
+
+        {/* Francisco right column */}
         <div className="flex flex-col justify-start">
           <p className="text-base leading-relaxed mb-6">
             Francisco brings a seasoned approach to scaling companies. He focuses on how AI and automation can unlock capacity, accelerate execution, and create sustainable growth. His work combines strategic insight with a practical understanding of how systems behave as businesses scale.
@@ -211,24 +218,29 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
             </div>
           </div>
         </div>
+
       </div>
 
       {/* Johannes */}
-      <div
-  className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-  onMouseMove={(e) => handleScrub(e, johannesPhotos, setJohannesPhotoIndex)}
-  onMouseLeave={() => resetPhoto(setJohannesPhotoIndex)}
-  onTouchStart={(e) => handleTouchScrub(e, johannesPhotos, setJohannesPhotoIndex)}
-  onTouchMove={(e) => handleTouchScrub(e, johannesPhotos, setJohannesPhotoIndex)}
-  onTouchEnd={() => resetTouchPhoto(setJohannesPhotoIndex)}
->
-  <img 
-    src={johannesPhotos[johannesPhotoIndex]}
-    alt="Johannes Struweg"
-    className="w-full h-full object-cover"
-  />
-</div>
+      <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-12">
 
+        {/* Johannes left column */}
+        <div className="flex flex-col items-start">
+
+          <div
+            className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
+            onMouseMove={(e) => handleScrub(e, johannesPhotos, setJohannesPhotoIndex)}
+            onMouseLeave={() => resetPhoto(setJohannesPhotoIndex)}
+            onTouchStart={(e) => handleTouchScrub(e, johannesPhotos, setJohannesPhotoIndex)}
+            onTouchMove={(e) => handleTouchScrub(e, johannesPhotos, setJohannesPhotoIndex)}
+            onTouchEnd={() => resetTouchPhoto(setJohannesPhotoIndex)}
+          >
+            <img 
+              src={johannesPhotos[johannesPhotoIndex]}
+              alt="Johannes Struweg"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           <div className="mt-4">
             <a
@@ -242,6 +254,9 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
             <p className="text-sm text-gray-600">Co-founder and COO</p>
           </div>
 
+        </div>
+
+        {/* Johannes right column */}
         <div className="flex flex-col justify-start">
           <p className="text-base leading-relaxed mb-6">
             Johannes is a serial entrepreneur with a deep focus on operational performance. Having built and led four companies, he understands where teams get stuck and how to deploy AI to remove friction, simplify workflows, and accelerate measurable outcomes.
@@ -271,11 +286,13 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
           </div>
 
         </div>
+
       </div>
 
     </div>
   </div>
 </section>
+
 
    {/* Footer */}
       <footer
