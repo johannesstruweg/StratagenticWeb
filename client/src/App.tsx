@@ -15,6 +15,7 @@ import FAQ from "@/pages/faq";
 import Team from "@/pages/team";
 import Resources from "@/pages/resources"; // ADD THIS LINE
 import NotFound from "@/pages/not-found";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 
 function Router() {
   return (
@@ -37,15 +38,16 @@ function Router() {
 
 function App() {
   return (
-   <LanguageProvider>
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Router />
-    </TooltipProvider>
-  </QueryClientProvider>
-</LanguageProvider>
+    <LanguageProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </LanguageProvider>
   );
 }
+
 
 export default App;
