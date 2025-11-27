@@ -30,7 +30,7 @@ hidden: false
     category: "Data processing",
     title: "Document Data Extraction",
     description: "Auto-extract data from PDFs + invoices + forms",
-    demoUrl: "#",
+    demoUrl: null,
     image: ComingSoonImage,
     hidden: false
   },
