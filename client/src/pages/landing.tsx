@@ -725,14 +725,18 @@ return (
                       const currentGlobalIndex = globalIndex + wIndex;
                       return (
                         <span
-                          key={wIndex}
-                          className={`inline-block transition-colors duration-300 ${
-                            currentGlobalIndex === highlightedWordIndex ? 'text-[#2563EB]' : 'text-black'
-                          }`}
-                          style={{ whiteSpace: word.isSpace ? 'pre' : 'normal' }}
-                        >
-                          {word.text}
-                        </span>
+                        key={wIndex}
+                        className={`transition-colors duration-300 ${
+                        currentGlobalIndex === highlightedWordIndex ? 'text-[#2563EB]' : 'text-black'
+                        }`}
+                        style={{
+                        display: word.isSpace ? 'inline' : 'inline-block',
+                        whiteSpace: word.isSpace ? 'normal' : 'nowrap'
+  }}
+>
+  {word.text}
+</span>
+
                       );
                     })}
                   </p>
