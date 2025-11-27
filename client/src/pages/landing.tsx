@@ -888,7 +888,7 @@ return (
 
       <section
         ref={(el) => (sectionsRef.current[3] = el)}
-        className="fade-in-section bg-white text-black border-t border-black overflow-hidden"
+        className="fade-in-section bg-white text-black overflow-hidden"
         style={{ padding: "var(--space-7) 0" }}
         data-testid="section-case-studies"
       >
@@ -1046,7 +1046,7 @@ return (
       <section
         id="contact-section"
         ref={(el) => (sectionsRef.current[4] = el)}
-        className="fade-in-section bg-white text-black border-t border-black"
+        className="fade-in-section bg-white text-black"
         style={{ padding: "var(--space-8) var(--space-3)" }}
         data-testid="section-contact"
       >
@@ -1144,7 +1144,7 @@ export function Footer() {
 
 
       <footer
-        className="bg-white text-black border-t border-black"
+        className="bg-white text-black"
         style={{ padding: "var(--space-5) var(--space-3)" }}
         data-testid="footer"
       >
