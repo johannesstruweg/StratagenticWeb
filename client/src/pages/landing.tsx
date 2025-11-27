@@ -1138,7 +1138,27 @@ export function Footer() {
     <>
    {showPrivacy && (
   <div
-    className="fixed bottom-4 right-4 bg-white text-black p-4 max-w-sm w-full border border-black text-sm shadow-xl rounded-none z-50"
+    className="
+  fixed
+  bottom-0
+  inset-x-0
+  w-full
+  p-0
+  bg-white
+  text-black
+  border border-black
+  text-sm
+  shadow-xl
+  rounded-none
+  z-50
+
+  sm:bottom-4
+  sm:right-4
+  sm:inset-x-auto
+  sm:max-w-sm
+  sm:w-full
+  sm:p-4
+"
   >
     <button
       onClick={() => setShowPrivacy(false)}
