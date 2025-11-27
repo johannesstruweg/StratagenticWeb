@@ -213,24 +213,29 @@ return (
             <Globe maxWidth={512} maxHeight={512} />
           </div>
           
-          <h1
-            className="font-bold mb-8"
-            style={{ 
-              fontSize: "clamp(1.4rem, 5.5vw + 0.5rem, 5.5rem)",
-              lineHeight: "0.92",
-              letterSpacing: "-0.04em"
-            }}
-            data-testid="text-hero-heading"
-          >
-            <span style={{ display: "block", whiteSpace: "nowrap" }}>Let's make work</span>
-            <span style={{ display: "block", whiteSpace: "nowrap" }}>feel like less work.</span>
-          </h1>
-          
-          <p className="text-sm mb-8 max-w-3xl mx-auto leading-relaxed" data-testid="text-hero-description">
-            Independent strategy and AI automation studio in Norway. 
-            We move fast and combine strategy, design, and intelligent 
-            automation to make growth measurable and sustainable.
-          </p>
+         <h1
+  className="font-bold mb-8"
+  style={{
+    fontSize: "clamp(1.4rem, 5.5vw + 0.5rem, 5.5rem)",
+    lineHeight: "0.92",
+    letterSpacing: "-0.04em"
+  }}
+  data-testid="text-hero-heading"
+>
+  <span style={{ display: "block", whiteSpace: "nowrap" }}>
+    {lang.heroLine1}
+  </span>
+  <span style={{ display: "block", whiteSpace: "nowrap" }}>
+    {lang.heroLine2}
+  </span>
+</h1>
+
+<p
+  className="text-sm mb-8 max-w-3xl mx-auto leading-relaxed"
+  data-testid="text-hero-description"
+>
+  {lang.heroDescription}
+</p>
           
        <button
   onClick={() => {
