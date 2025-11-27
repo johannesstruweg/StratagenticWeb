@@ -52,8 +52,8 @@ export function ContactForm() {
       }
       
       toast({
-        title: "Message sent!",
-        description: "We'll get back to you soon.",
+        title: "Message sent",
+        description: "We'll be in touch soon.",
       });
     },
     onError: (error: any) => {
@@ -73,7 +73,7 @@ export function ContactForm() {
     return (
       <div className="text-center py-12" data-testid="text-form-success">
         <h3 className="text-4xl font-bold mb-4 tracking-tight">
-          Thankyou!
+          Thank you
         </h3>
         <p className="text-lg mb-8">
           Your message has been received. We'll be in touch soon.
@@ -126,7 +126,7 @@ export function ContactForm() {
                   {...field}
                   value={field.value || ""}
                   className="border-black focus:border-[#2563EB] focus:ring-[#2563EB]"
-                  placeholder="Acme Inc."
+                  placeholder="Company name"
                   data-testid="input-company"
                 />
               </FormControl>
@@ -148,7 +148,7 @@ export function ContactForm() {
                   {...field}
                   type="email"
                   className="border-black focus:border-[#2563EB] focus:ring-[#2563EB]"
-                  placeholder="john@company.com"
+                  placeholder="name@company.com"
                   data-testid="input-email"
                 />
               </FormControl>
