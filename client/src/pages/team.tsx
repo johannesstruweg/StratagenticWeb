@@ -182,7 +182,6 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
             </a>
             <p className="text-sm text-gray-600">Co-founder and CEO</p>
           </div>
-        </div>
 
         <div className="flex flex-col justify-start">
           <p className="text-base leading-relaxed mb-6">
@@ -242,7 +241,6 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
             </a>
             <p className="text-sm text-gray-600">Co-founder and COO</p>
           </div>
-        </div>
 
         <div className="flex flex-col justify-start">
           <p className="text-base leading-relaxed mb-6">
