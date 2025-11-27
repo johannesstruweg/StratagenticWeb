@@ -1080,18 +1080,23 @@ return (
             <p className="text-lg mb-6 leading-relaxed">
               Get your free bespoke AI Opportunity audit. We identify your biggest time-wasters and automation opportunities, identifying 10+ hours of weekly savings.
             </p>
-            <ul className="space-y-3 text-base">
-              <li className="flex items-start">
-                <span className="font-bold mr-2">ROI guarantee:</span>
-                <span>Save more than you spend or we work until you do</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-bold mr-2">Quick implementation:</span>
-                <span>First automation live within 30 days</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-bold mr-2">No lock-in:</span>
-                <span>You own everything we build</span>
+           <ul className="space-y-3 text-base">
+            <li className="flex flex-col md:flex-row items-start">
+              <span className="font-bold mr-2">ROI guarantee</span>
+              <span>Save more than you spend or we work until you do</span>
+            </li>
+
+            <li className="flex flex-col md:flex-row items-start">
+              <span className="font-bold mr-2">Quick implementation</span>
+              <span>First automation live within 30 days</span>
+            </li>
+
+            <li className="flex flex-col md:flex-row items-start">
+              <span className="font-bold mr-2">No lock-in</span>
+              <span>You own everything we build</span>
+            </li>
+          </ul>
+
               </li>
             </ul>
           </div>
