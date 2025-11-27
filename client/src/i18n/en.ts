@@ -7,5 +7,4 @@ export const en = {
   testimonialQuote: "We needed a practical approach to AI that fit our reality as an engineering manufacturer. Stratagentic delivered exactly that, no hype, just relevant examples and a clear process for identifying where we should focus our efforts. The Opportunity Report gives us a roadmap we can build on, and I'm confident we're starting in the right place.",
   testimonialName: "Svein W. Kristiansen, GM, Smed"
   
-  contactTitle: "Scale faster than ever, guaranteed results.",
 };
