@@ -226,7 +226,7 @@ const resetTouchPhoto = (setIndex: (i: number) => void) => {
 
   onTouchStart={(e) => handleTouchScrub(e, photos, setIndex)}
   onTouchMove={(e) => handleTouchScrub(e, photos, setIndex)}
-  onTouchEnd={() => resetTouchPhoto(setIndex)}}
+  onTouchEnd={() => resetTouchPhoto(setIndex)}
           >
             <img 
               src={johannesPhotos[johannesPhotoIndex]}
