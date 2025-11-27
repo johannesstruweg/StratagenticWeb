@@ -42,7 +42,6 @@ export default function Landing() {
 
   const PROCESSED_MANIFESTO = processManifesto(lang.manifestoParagraphs);
   const WORD_INDICES = calculateWordIndices(PROCESSED_MANIFESTO);
-  const processedManifesto = processManifestoText(lang.manifesto);
   
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const [time, setTime] = useState(new Date());
