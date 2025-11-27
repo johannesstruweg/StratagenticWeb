@@ -753,7 +753,7 @@ return (
   style={{ padding: "var(--space-7) var(--space-3)" }}
   data-testid="section-testimonial"
 >
-  <div className="max-w-[1400px] mx-auto">
+  <div className="max-w-[1300px] mx-auto">
     <blockquote className="italic text-xl text-[#2563EB] leading-relaxed mb-4">
       “We needed a practical approach to AI that fit our reality as an engineering manufacturer. 
       Stratagentic delivered exactly that, no hype, just relevant examples and a clear process 
