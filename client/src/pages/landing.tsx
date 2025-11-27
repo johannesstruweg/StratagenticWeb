@@ -725,11 +725,12 @@ return (
               className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight space-y-8" 
               data-testid="text-better-world-content"
             >
-              {processedManifesto.map((paragraph, pIndex) => {
-                let globalIndex = 0;
-                for (let i = 0; i < pIndex; i++) {
-                  globalIndex += processedManifesto[i].length;
-                }
+              {PROCESSED_MANIFESTO.map((paragraph, pIndex) => {
+  let globalIndex = 0;
+  for (let i = 0; i < pIndex; i++) {
+    globalIndex += PROCESSED_MANIFESTO[i].length;
+  }
+
                 
                 return (
                   <p key={pIndex}>
