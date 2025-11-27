@@ -9,7 +9,7 @@ import salesCollateralImage from "@assets/images/MeAndAI_Park.png";
 import linkedInGrowthImage from "@assets/images/MeAndAI_Chatterbox.png";
 import outreachEngineImage from "@assets/images/MeAndAI_Coffeebreak.png";
 import { Header } from "@/components/header";
-import { PROCESSED_MANIFESTO, WORD_INDICES } from "@/components/manifesto-utils";
+import { processedManifesto, WORD_INDICES } from "@/components/manifesto-utils";
 import { useLang } from "@/i18n/LanguageProvider";
 
 const getSessionId = () => {
@@ -39,6 +39,8 @@ const trackEvent = async (eventType: string, eventData?: any) => {
 
 export default function Landing() {
   const { lang } = useLang(); 
+
+  const processedManifesto = processManifestoText(lang.manifesto);
   
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const [time, setTime] = useState(new Date());
@@ -722,10 +724,10 @@ return (
               className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight space-y-8" 
               data-testid="text-better-world-content"
             >
-              {PROCESSED_MANIFESTO.map((paragraph, pIndex) => {
+              {processedManifesto.map((paragraph, pIndex) => {
                 let globalIndex = 0;
                 for (let i = 0; i < pIndex; i++) {
-                  globalIndex += PROCESSED_MANIFESTO[i].length;
+                  globalIndex += processedManifesto[i].length;
                 }
                 
                 return (
