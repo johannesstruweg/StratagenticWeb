@@ -1064,65 +1064,68 @@ return (
         </div>
       </section>
 
-      <section
-        id="contact-section"
-        ref={(el) => (sectionsRef.current[4] = el)}
-        className="fade-in-section bg-white text-black"
-        style={{ padding: "var(--space-8) var(--space-3)" }}
-        data-testid="section-contact"
-      >
-        <div className="max-w-[1400px] mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-tight" data-testid="text-contact-heading">
-            Scale faster than ever - guaranteed results or it&apos;s free.
-          </h2>
-          
-          <div className="mb-12 max-w-3xl">
-            <p className="text-lg mb-6 leading-relaxed">
-              Get your free bespoke AI Opportunity audit. We identify your biggest time-wasters and automation opportunities, identifying 10+ hours of weekly savings.
-            </p>
-         <ul className="space-y-3 text-base">
-  <li className="flex flex-col md:flex-row items-start">
-    <span className="font-bold mr-2">ROI guarantee:</span>
-    <span>Save more than you spend or we work until you do</span>
-  </li>
+    <section
+  id="contact-section"
+  ref={(el) => (sectionsRef.current[4] = el)}
+  className="fade-in-section bg-white text-black"
+  style={{ padding: "var(--space-8) var(--space-3)" }}
+  data-testid="section-contact"
+>
+  <div className="max-w-[1400px] mx-auto">
+    <h2
+      className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-tight"
+      data-testid="text-contact-heading"
+    >
+      Scale faster than ever - guaranteed results or it&apos;s free.
+    </h2>
 
-  <li className="flex flex-col md:flex-row items-start">
-    <span className="font-bold mr-2">Quick implementation:</span>
-    <span>First automation live within 30 days</span>
-  </li>
+    <div className="mb-12 max-w-3xl">
+      <p className="text-lg mb-6 leading-relaxed">
+        Get your free bespoke AI Opportunity audit. We identify your biggest time-wasters and
+        automation opportunities, identifying 10+ hours of weekly savings.
+      </p>
 
-  <li className="flex flex-col md:flex-row items-start">
-    <span className="font-bold mr-2">No lock-in:</span>
-    <span>You own everything we build</span>
-  </li>
-</ul>
+      <ul className="space-y-3 text-base">
+        <li className="flex flex-col md:flex-row items-start">
+          <span className="font-bold mr-2">ROI guarantee:</span>
+          <span>Save more than you spend or we work until you do</span>
+        </li>
 
-              </li>
-            </ul>
-          </div>
-          
-          <ContactForm />
-          
-          <p className="text-xs mt-6 text-gray-600">
-            Limited spots available this month. By submitting, you agree to our Privacy Policy and Terms of Service.
-          </p>
-          
-          <div className="mt-12 pt-12 border-t border-black">
-            <p className="text-lg">
-              Or email us directly at{" "}
-              <a
-                href="mailto:hello@stratagentic.ai"
-                className="font-bold hover:text-[#2563EB] transition-colors"
-                data-testid="link-email"
-              >
-                hello@stratagentic.ai↗
-              </a>
-            </p>
-          </div>
-           </div>
-    </section>
+        <li className="flex flex-col md:flex-row items-start">
+          <span className="font-bold mr-2">Quick implementation:</span>
+          <span>First automation live within 30 days</span>
+        </li>
 
-        <Footer />
+        <li className="flex flex-col md:flex-row items-start">
+          <span className="font-bold mr-2">No lock-in:</span>
+          <span>You own everything we build</span>
+        </li>
+      </ul>
+    </div>
+
+    <ContactForm />
+
+    <p className="text-xs mt-6 text-gray-600">
+      Limited spots available this month. By submitting, you agree to our Privacy Policy and Terms
+      of Service.
+    </p>
+
+    <div className="mt-12 pt-12 border-t border-black">
+      <p className="text-lg">
+        Or email us directly at{" "}
+        <a
+          href="mailto:hello@stratagentic.ai"
+          className="font-bold hover:text-[#2563EB] transition-colors"
+          data-testid="link-email"
+        >
+          hello@stratagentic.ai↗
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+    <Footer />
     
     </div>
   );
