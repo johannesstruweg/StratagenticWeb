@@ -99,6 +99,25 @@ export default function Team() {
     setIndex(Math.min(newIndex, photos.length - 1));
   };
 
+  // touch-scrub photo switching
+const handleTouchScrub = (
+  e: React.TouchEvent<HTMLDivElement>,
+  photos: string[],
+  setIndex: (i: number) => void
+) => {
+  const touch = e.touches[0];
+  const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+  const x = touch.clientX - rect.left;
+  const ratio = x / rect.width;
+
+  const newIndex = Math.floor(ratio * photos.length);
+  setIndex(Math.min(Math.max(newIndex, 0), photos.length - 1));
+};
+
+const resetTouchPhoto = (setIndex: (i: number) => void) => {
+  setIndex(0);
+};
+
   const resetPhoto = (setIndex: (i: number) => void) => {
     setIndex(0);
   };
@@ -140,8 +159,12 @@ export default function Team() {
         <div className="flex flex-col items-start">
           <div
             className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-            onMouseMove={(e) => handleScrub(e, franciscoPhotos, setFranciscoPhotoIndex)}
-            onMouseLeave={() => resetPhoto(setFranciscoPhotoIndex)}
+           onMouseMove={(e) => handleScrub(e, photos, setIndex)}
+  onMouseLeave={() => resetPhoto(setIndex)}
+
+  onTouchStart={(e) => handleTouchScrub(e, photos, setIndex)}
+  onTouchMove={(e) => handleTouchScrub(e, photos, setIndex)}
+  onTouchEnd={() => resetTouchPhoto(setIndex)}
           >
             <img 
               src={franciscoPhotos[franciscoPhotoIndex]}
@@ -198,8 +221,12 @@ export default function Team() {
         <div className="flex flex-col items-start">
           <div
             className="w-full aspect-square border border-black overflow-hidden cursor-pointer hover:border-[#2563EB] transition-all duration-300 p-0 bg-transparent"
-            onMouseMove={(e) => handleScrub(e, johannesPhotos, setJohannesPhotoIndex)}
-            onMouseLeave={() => resetPhoto(setJohannesPhotoIndex)}
+           onMouseMove={(e) => handleScrub(e, photos, setIndex)}
+  onMouseLeave={() => resetPhoto(setIndex)}
+
+  onTouchStart={(e) => handleTouchScrub(e, photos, setIndex)}
+  onTouchMove={(e) => handleTouchScrub(e, photos, setIndex)}
+  onTouchEnd={() => resetTouchPhoto(setIndex)}}
           >
             <img 
               src={johannesPhotos[johannesPhotoIndex]}
