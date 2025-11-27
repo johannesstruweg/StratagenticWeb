@@ -10,6 +10,7 @@ import linkedInGrowthImage from "@assets/images/MeAndAI_Chatterbox.png";
 import outreachEngineImage from "@assets/images/MeAndAI_Coffeebreak.png";
 import { Header } from "@/components/header";
 import { PROCESSED_MANIFESTO, WORD_INDICES } from "@/components/manifesto-utils";
+import { useLang } from "@/i18n/LanguageProvider";
 
 const getSessionId = () => {
   let sessionId = sessionStorage.getItem('analytics_session_id');
@@ -37,11 +38,14 @@ const trackEvent = async (eventType: string, eventData?: any) => {
 };
 
 export default function Landing() {
-  const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+  const { lang } = useLang(); 
+  
+  const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const [time, setTime] = useState(new Date());
   const [maxScrollDepth, setMaxScrollDepth] = useState(0);
   const [nextMilestone, setNextMilestone] = useState(25);
   const pageLoadTime = useRef(Date.now());
+  
   const [expandedUseCases, setExpandedUseCases] = useState<{
     revenue: boolean;
     expansion: boolean;
