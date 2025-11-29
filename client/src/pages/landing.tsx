@@ -1210,7 +1210,7 @@ export function Footer() {
       >
         <div className="max-w-[1400px] mx-auto text-sm flex justify-between items-center">
           <p data-testid="text-footer">
-            © 2025 Stratagentic – All rights reserved. AI-assisted, human-approved
+            © 2025 Stratagentic ‧ Norway ‧ All rights reserved ‧ AI-assisted, human-approved ♡
           </p>
 
           <button
